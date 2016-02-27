@@ -1,0 +1,22 @@
+
+I tried to think of a good sidekick from literature or film that
+reminded me of what I wanted for this, and came up with Archie
+Goodwin, Nero Wolfe's sidekick. In the Nero Wolfe books by Rex
+Stout, Archie Goodwin is a wise-cracking assistant who does a lot
+of things, but who needs the brilliant (yet stay-at-home) detective
+to actually figure things out. In this respect the users of this
+app play the role of Nero.
+
+The basic idea is to make a code generator, simplifier, improver,
+that has a conversation with you, and can read/parse code and
+generate or regenerate bits of it. Rather than a typical code
+generator, which is done once at the beginning of the project, by
+filling out a form (or equivalent), this would ask questions, and
+get more specifics and the models, APIs, etc., before generating
+the first code, and would leave markers in the code (as comments)
+to guide later parsing and automated changes.
+
+To Do Next:
+
+[ ] think through an initial design
+[ ] make the simplest possible thing just to get started
