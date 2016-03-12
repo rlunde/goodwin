@@ -36,3 +36,4 @@ build/
 .rvmrc
 
 /electron-quick-start/
+**/node_modules/
