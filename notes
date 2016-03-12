@@ -1,0 +1,29 @@
+It looks like it might be fun to try out electron (http://electron.atom.io) for
+building HTML/CSS/JS apps that run as desktop apps and use Node.js. I'd like
+the client side to be as interactive as a desktop app, but portable, and 
+transparent so the developers who eventually use it can verify that nobody
+has snuck evil stuff into it.
+
+The quick start tutorial is:
+http://electron.atom.io/docs/latest/tutorial/quick-start/
+The quick start demo is:
+
+# Clone the Quick Start repository
+$ git clone https://github.com/atom/electron-quick-start
+
+# Go into the repository
+$ cd electron-quick-start
+
+# Install the dependencies and run
+$ npm install && npm start
+
+I tried installing electron-prebuilt globally via this:
+$ npm install --global electron-prebuilt
+
+But then when I tried to run it I got this error:
+$ electron .
+dyld: Library not loaded: /usr/local/lib/libffmpeg.dylib
+  Referenced from: /usr/local/lib/node_modules/electron-prebuilt/dist/Electron.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Electron Framework
+    Reason: image not found
+
+I'm trying over with a local node_modules install like that above, and a modified copy of the package.json.

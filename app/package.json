@@ -1,0 +1,28 @@
+{
+  "name": "goodwin",
+  "version": "0.1.0",
+  "description": "A minimal goodwin client based on electron",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron main.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rlunde/goodwin.git"
+  },
+  "keywords": [
+    "Electron",
+    "goodwin",
+    "code",
+    "assistant"
+  ],
+  "author": "Ron Lunde",
+  "license": "CC0-1.0",
+  "bugs": {
+    "url": "https://github.com/rlunde/goodwin/issues"
+  },
+  "homepage": "https://github.com/rlunde/goodwin#readme",
+  "devDependencies": {
+    "electron-prebuilt": "^0.36.0"
+  }
+}
