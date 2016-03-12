@@ -20,3 +20,11 @@ To Do Next:
 
 [ ] think through an initial design
 [ ] make the simplest possible thing just to get started
+[ ] try to make it fun, and funny -- make it a wiseass like Archie Goodwin in the books
+[ ] make a list of all the most popular code generators (e.g. in Rails), and see how
+    they work. Look for things that can parse and ge-generate portions of code.
+[ ] decide on an architecture -- I think I could get hung up worrying about deployment issues,
+    but since (initially at least) this is for developers, the client piece should be transparent,
+    and anything destructive should be very carefully done and verified.
+[ ] I'm thinking of a client/server architecture, with the server written for speed, simplicity,
+    and efficiency, and the client written for simplicity and transparency.
