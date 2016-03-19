@@ -27,3 +27,10 @@ dyld: Library not loaded: /usr/local/lib/libffmpeg.dylib
     Reason: image not found
 
 I'm trying over with a local node_modules install like that above, and a modified copy of the package.json.
+
+I ended up installing bootstrap and jquery locally too.
+To install those yourself:
+  cd ./app
+  npm install jquery
+  npm install bootstrap
+
