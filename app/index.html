@@ -11,6 +11,8 @@
 
     <!-- Optional theme -->
     <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap-theme.min.css">
+    <!-- App -->
+    <link rel="stylesheet" href="css/sticky-footer.css">
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -23,12 +25,16 @@
   <body>
     <h1>Goodwin</h1>
     <p>Ungh! Oh my head! Where am I?</p>
-    <footer>
+    <footer class="footer">
+    <div class="container">
+    <p class="text-muted">
     This is Goodwin Client, version 0.1.0, which is based on 
     <a href="http://electron.atom.io/">Electron</a>.
     We are using node <script>document.write(process.versions.node)</script>,
     Chrome <script>document.write(process.versions.chrome)</script>,
     and Electron <script>document.write(process.versions.electron)</script>.
+    </p>
+    </div>
     </footer>
     <script src="node_modules/jquery/dist/jquery.min.js"></script>
     <script>
