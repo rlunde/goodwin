@@ -39,3 +39,8 @@ to do a code generation snippet for. Prompt the user, and say "sorry, so far all
 I know how to do is make fun CSS animations for existing HTML or SVG elements".
 Then learn how to parse input, have a Q&A session with the user, etc.
 
+I think the most important thing to get going right from the start, and keep
+working on, is a wise-ass attitude like Archie Goodwin has in the Nero Wolfe
+books. Not everyone will enjoy that, of course, but it's a way to make something
+unique and interesting right away, rather than just another code generator app.
+
