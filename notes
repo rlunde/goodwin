@@ -47,3 +47,9 @@ unique and interesting right away, rather than just another code generator app.
 I think I should position the input panel at the bottom, and intermix messages
 from the user and from Goodwin as if they were in Slack or something above that.
 
+I think I'll try taking a look at the web apps for slack, hipchat, etc. (or try
+to find something simpler) and see how they mix input and output in a "chat" 
+stream.
+
+Or maybe there's a tutorial for a chat client that does that?
+
