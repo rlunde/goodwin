@@ -56,3 +56,8 @@ Or maybe there's a tutorial for a chat client that does that?
 After poking around for a while, I found a list of chat templates for bootstrap,
 here: http://www.designrazor.net/best-free-bootstrap-chat-templates/
 
+I guess I should be better about splitting up the notes about the whole project
+into this file, and things specific to the client or the server under their
+own directories in devlog.me or notes.
+
+
