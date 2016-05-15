@@ -1,0 +1,38 @@
+A Djinn In A Box?
+
+I've been struggling to figure out what to put on the client side, and what to put
+on the server side. Something that generates code that other tools and editors
+need to interact with seems like it should be on the client. The problem is, I
+want it to get smarter day by day, and we can't very well have the whole base
+syncing to the client side all the time, at least if we eventually have a whole
+lot of data used by/for deep learning. Also, that much syncing and nobody is going
+to know for sure what's being synced.
+
+The problem with a client that can interact with local files but that gets its
+orders from a server is that security becomes a nightmare even more quickly.
+
+I've tried to think of a good way to provide the functionality without the risk,
+but it's really complicated. What I propose is that people set up
+a VM (e.g. with VirtualBox) for use with Goodwin, and let the server be as
+powerful as needed, then they can synchronize generated code (etc.) via git
+or something similar.
+
+In a way, it's like making your own browser sandbox, only you can let Goodwin
+do whatever it wants. It's only when you move things from there out to the
+real world that you should make sure you know what you're doing, but if you're
+committing code to an actual project (of your own or some other project) you
+really ought to know what is in it.
+
+Of course, we're going to try our hardest to not let anything bad get into the
+code or in the rules, but if you decide to run it on your actual computer rather
+than inside a VM, it's definitely "Use At Your Own Risk". We'll have to make
+sure we come up with a suitable warning and disclaimer.
+
+How To Build The Server
+
+All that said, the question becomes what to choose for the server side. I think
+even if it becomes a web tier and an application tier before it's done (as it
+should) the ultimate goal should be performance and scalability on both of
+those, so I think I'll try Go for it, rather than something like a web framework
+(such as RAILS).
+
