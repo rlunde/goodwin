@@ -37,3 +37,6 @@ build/
 
 /electron-quick-start/
 **/node_modules/
+
+# server
+/server
