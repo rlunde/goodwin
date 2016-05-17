@@ -36,3 +36,6 @@ should) the ultimate goal should be performance and scalability on both of
 those, so I think I'll try Go for it, rather than something like a web framework
 (such as RAILS).
 
+Run "go build" in this directory to build the server. Still to come: all the
+dependencies outside of the standard library, etc.
+
