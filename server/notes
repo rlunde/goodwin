@@ -39,3 +39,5 @@ those, so I think I'll try Go for it, rather than something like a web framework
 Run "go build" in this directory to build the server. Still to come: all the
 dependencies outside of the standard library, etc.
 
+Time to start brainstorming APIs and data structures. I think I'll put a first
+guess at some of those in other files.

@@ -1,0 +1,28 @@
+
+I think the client will build stuff locally, edit code (itself -- it's not 
+going to be an editor), and that kind of thing. Plus, it will send conversation
+and files to the server.
+
+The server will keep only as much of a copy of what's on the client as you want,
+and will archive, compress, and encrypt the files when you log out -- that will
+prevent having to upload the whole thing every times you log in, but will
+be a little safer than leaving things laying around in the clear.
+
+TODO: Find out what Box, DropBox, OneDrive, Drive, etc. do about server-side
+file security. At least initially, maybe the thing to do is say "don't use it
+on sensitive things?"
+
+The server should keep a record of all the interactions you've had with Goodwin,
+and should let you search for spots in the conversation and restore the context
+of any point in the conversation.
+
+Context:
+
+1) what are you doing? (Developing, designing, planning a party, ...)
+2) what are the artifacts (e.g. descriptions, files, pseudocode, checklists, requirements, ...) (party) done so far?
+3) what is the structure? What are the pieces, and what order (if any) do they need to be done in?
+4) what are the open questions?
+5) what are the problems to be solved?
+6) who is involved?
+7) is there are rough schedule?
+8) what is the success criteria?
