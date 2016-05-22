@@ -28,3 +28,15 @@ To Do Next:
     and anything destructive should be very carefully done and verified.
 [ ] I'm thinking of a client/server architecture, with the server written for speed, simplicity,
     and efficiency, and the client written for simplicity and transparency.
+
+In addition to code generation, there's just helping figure out how to
+use tools. Git is a great place to start. There are a whole lot of options
+to git and different ways of using it, and most of the confusion could
+probably be cleared up by asking a few questions.
+
+Writing code or explaining code probably falls into the same category. A user
+may want to know what a closure is, and when to use one, or may want syntax
+help just making an anonymous function, or may want a confusing bit of code
+explained.
+
+
