@@ -60,4 +60,21 @@ I guess I should be better about splitting up the notes about the whole project
 into this file, and things specific to the client or the server under their
 own directories in devlog.me or notes.
 
+Actually, in addition to helping people figure out how to use git (by having
+a conversation -- which could just be Q&A at first) I'll bet there are a handful
+of other things that people only do once in a while that they don't want to
+spend hours (or days, or weeks) learning or re-learning in order to do something.
+
+I'll bet a few hours poring over common topics for questions in stackoverflow
+would give me some ideas for simple things.
+
+A lot of the time, I suspect it's just a matter of terminology, rather than
+anything else. If you know roughly what you want to do, but you don't know
+what it's called, you can't even Google it effectively.
+
+Also, just being able to ask questions (like a wizard interface might do) and
+then *explain* the options, might be a huge help. (I still remember some of
+the original Linux installation questions, which asked users to make decisions
+on how to partition disks when they had no idea what they needed or what the
+tradeoffs were, and didn't want to know).
 
