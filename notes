@@ -83,5 +83,19 @@ a way that is most likely to solicit a useful answer on stackoverflow or other
 sites. Many questions are too vague or are so poorly written that they're
 unlikely to interest the right people.
 
+See server/notes for my initial decision about how to split things between
+client and server. In a nutshell:
 
+Client:
+  * written in node/javascript, run using electron
+    * provides native-ish UI while using web technologies
+  * full access to local files and directories, and ability to run external programs
+  * run it inside a VM to prevent security problems
+  * main job is to interact with the user and the user's computer
+
+Server:
+  * a collection of microservice
+  * able to download code and remotely execute on client (which is inside a VM)
+  * should be continuously deployed/updated
+  * knows about user and history across and inside sessions
 
