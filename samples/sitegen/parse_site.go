@@ -8,18 +8,18 @@ import (
 )
 
 type FileRef struct {
-	directory string
-	template  string
+	Directory string `json:directory`
+	Template  string `json:template`
 }
 type FileDef struct {
-	name    string
-	fileRef FileRef
+	Name    string
+	FileRef FileRef
 }
 type SiteStructure struct {
-	title             string
-	outputDirectory   string
-	templateDirectory string
-	files             []FileDef
+	Title             string    `json:title`
+	OutputDirectory   string    `json:outputDirectory`
+	TemplateDirectory string    `json:templateDirectory`
+	Files             []FileDef `json:files`
 }
 
 func main() {
@@ -31,11 +31,12 @@ func main() {
 	dec := json.NewDecoder(file)
 	for {
 		var s SiteStructure
+		_ = "breakpoint"
 		if err := dec.Decode(&s); err != nil {
 			log.Println(err)
 			return
 		} else {
-			log.Println(s.title)
+			log.Println(s.Title)
 			spew.Dump(s)
 		}
 	}
