@@ -3,17 +3,20 @@
   "outputDirectory":"example1",
   "templateDirectory":"templates",
   "files" : [
-    "index.html" : {
+    {"index.html" : {
        "directory":".",
        "template":"simple.html"
+       }
     },
-    "main.js" : {
+    {"main.js" : {
        "directory":"./js",
        "template":"simple.js"
+       }
     },
-    "main.css" : {
+    {"main.css" : {
        "directory":"./css",
        "template":"simple.css"
+       }
     }
   ]
 }
