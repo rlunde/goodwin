@@ -99,3 +99,7 @@ Server:
   * should be continuously deployed/updated
   * knows about user and history across and inside sessions
 
+Start with code generation/re-generation for D3, because D3 is super cool,
+but a lot of it isn't very intuitive (e.g. select for things that don't exist
+yet).
+
