@@ -103,3 +103,8 @@ Start with code generation/re-generation for D3, because D3 is super cool,
 but a lot of it isn't very intuitive (e.g. select for things that don't exist
 yet).
 
+I registered the domain gend3.com for that, and pointed it at a ubuntu server
+in the cloud. I want to read/write a JSON representation of a sample D3
+app from goodwin, and have the server be able to generate a sample web site
+(with html, css, and js) from that, to download as a tarball.
+
