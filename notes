@@ -108,3 +108,7 @@ in the cloud. I want to read/write a JSON representation of a sample D3
 app from goodwin, and have the server be able to generate a sample web site
 (with html, css, and js) from that, to download as a tarball.
 
+I want to come up with a set of (rarely used) witticisms for Goodwin to
+say -- not sarcastic, like "you thought of that all by yourself?" but
+things that could be taken two ways, or backhanded compliments.
+
