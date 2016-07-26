@@ -1,0 +1,13 @@
+A first sample code generator that might be fun is for D3,
+which is amazingly cool and powerful, but not very intuitive.
+I looked for people already doing code generation for D3,
+and didn't find too much, yet:
+
+http://d3-generator.com/ : a bar chart generator
+
+https://vida.io : d3 templates with a nice UI to help 
+   choose and edit them (sign up is required for most things,
+   so I don't know how many templates they have or what
+   they're like)
+
+
