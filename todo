@@ -48,3 +48,27 @@ d) make an interactive bot that helps build up the json file
 Of course, later on, it should be a lot more feature rich, but that
 seems like a good short term strategy.
 
+Lately I've tried using a fair number of javascript code generators, and while
+some of them do a really great job of generating a project that covers all the
+bases, to a great degree they're all examples of what I consider the absolute
+worst approach to software development: start with a framework that includes
+(literally) *megabytes of source code* and then have a "build" step to generate
+a light-enough version for browsers to use, but have the "built" stuff be
+incomprehensible and (realistically) uneditable.
+
+Meanwhile, the tutorial sites for react, angular, etc. all want to show you how
+a few JS includes from a CDN will pull in their framework/libraries, and then
+you can make your "hello world" example in a handful of lines.
+
+I want to have a code generator that goes beyond hello world, but stays with
+something that will actually run in a browser but it editable by hand. I want
+an assistant, that can help re-generate portions of code, or refactor code, or
+explain code, not a thing that just poops out something that's too big to 
+understand in a dev environment that makes stuff that's too munged up to
+understand in the browser.
+
+So what's the first step towards that?
+
+a) begin with the end in mind -- write up more about how I want this to work
+b) make a command-line chat interface that collects info needed to make a *simple* project
+
