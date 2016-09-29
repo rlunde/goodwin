@@ -4,3 +4,4 @@ b) generate a D3 chart or graph based on conversation
 c) generate a model and to/from JSON serialization and a database schema in SQL or NoSQL
 d) take a sample of JSON (or yaml) as input, ask questions about each part, and generate a model (etc) as above
 e) have a conversation about a simple problem, and choose a sample example that's similar to what you might do
+f) generate an iphone / android app based on asking some questions
