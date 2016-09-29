@@ -72,3 +72,8 @@ So what's the first step towards that?
 a) begin with the end in mind -- write up more about how I want this to work
 b) make a command-line chat interface that collects info needed to make a *simple* project
 
+Also, I have a few other sample projects that I'm doing just to learn things -- this
+is a perfect opportunity to take a step back and make this project be the thing
+that generates (some of) the code for those. That way I have some very simple
+real world examples to work with and still make progress on those other things.
+
