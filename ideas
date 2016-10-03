@@ -5,3 +5,8 @@ c) generate a model and to/from JSON serialization and a database schema in SQL 
 d) take a sample of JSON (or yaml) as input, ask questions about each part, and generate a model (etc) as above
 e) have a conversation about a simple problem, and choose a sample example that's similar to what you might do
 f) generate an iphone / android app based on asking some questions
+
+I think the most fun first thing to do will be D3. Especially since the recent release of the latest version of D3 (version 4) has broken a few of the examples that people find.
+
+The ones I think are the most fun and likely to be interesting for early users are the bubble chart and the collapsible force layout (http://mbostock.github.io/d3/talk/20111116/force-collapsible.html).
+
