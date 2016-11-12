@@ -77,3 +77,5 @@ is a perfect opportunity to take a step back and make this project be the thing
 that generates (some of) the code for those. That way I have some very simple
 real world examples to work with and still make progress on those other things.
 
+I'm thinking of using clojure as either the source or destination, in part. I'd like
+to have an excuse to learn clojure better.
