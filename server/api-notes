@@ -26,3 +26,9 @@ Context:
 6) who is involved?
 7) is there are rough schedule?
 8) what is the success criteria?
+
+Another option for a client-side sandbox for generating and manipulating files without fear of 
+messing up security might be some sort of "chroot". I just set up "crouton" on a chromebook, which
+isn't the most secure thing in the world, but mostly it's not secure if someone has physical
+access to it. That model seems much easier to try than setting up a VM.
+
