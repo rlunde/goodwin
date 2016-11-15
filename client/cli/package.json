@@ -1,0 +1,14 @@
+{
+  "name": "goodwin-cli",
+  "version": "1.0.0",
+  "description": "A CLI tester for Goodwin code",
+  "main": "index.js",
+  "scripts": {
+    "test": "nodeunit cli-test.js"
+  },
+  "bin": {
+    "goodwin-cli": "./index.js"
+  },
+  "author": "Ron Lunde",
+  "license": "Apache-2.0"
+}

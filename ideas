@@ -10,5 +10,4 @@ I think the most fun first thing to do will be D3. Especially since the recent r
 
 The ones I think are the most fun and likely to be interesting for early users are the bubble chart and the collapsible force layout (http://mbostock.github.io/d3/talk/20111116/force-collapsible.html).
 
-I have been playing with Clojure a bit, and have an idea that the client side might be even more fun to do in elelectron with Clojurescript, but that also might be just complex enough to make my head explode? Here's somebody who likes electron + clojurescript, though: https://github.com/Gonzih/cljs-electron
-
+Realistically, the client should be in node, since that's what electron is in.
