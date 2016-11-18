@@ -77,5 +77,8 @@ is a perfect opportunity to take a step back and make this project be the thing
 that generates (some of) the code for those. That way I have some very simple
 real world examples to work with and still make progress on those other things.
 
-I'm thinking of using clojure as either the source or destination, in part. I'd like
-to have an excuse to learn clojure better.
+I'd said that I was thinking of using clojure for part of this, but have changed
+my mind -- I'd like to have clojure be a target, but only eventually. In the short
+term, I think it makes the most sense to stick with JavaScript and Go, since
+getting something working that other people can (eventually) contribute to is
+more important than using a "fun" functional language like that.
