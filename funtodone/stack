@@ -1,9 +1,11 @@
 This is an example stack as I imagine it might be represented in funtodone (see
 that project) for goodwin.
 
-4: make a command line chat program that just creates a skeleton JSON format description
-4: make a directory for D3 project sample descriptions
-3: make a JSON format D3 sample description
+4: make a capture/replay test framework for command line chat program
+4: make an example JSON format D3 sample project description
+4: include description in every JSON element (since we can't have comments)
+3: make a command line chat program that just creates a skeleton JSON format description
+3: make a directory for D3 project sample descriptions (and brainstorm persistence requirements for MVP)
 3: make a command line chat that collects info for a D3 sample and outputs JSON description
 3: make a D3 code generator that takes a JSON description and produces a D3 example
 2: get a D3 conversational code generator working for a limited subset of D3
