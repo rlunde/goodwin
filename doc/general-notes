@@ -94,7 +94,7 @@ Client:
   * main job is to interact with the user and the user's computer
 
 Server:
-  * a collection of microservice
+  * a collection of microservices
   * able to download code and remotely execute on client (which is inside a VM)
   * should be continuously deployed/updated
   * knows about user and history across and inside sessions
