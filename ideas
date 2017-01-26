@@ -16,3 +16,6 @@ early users are the bubble chart and the collapsible force layout
 
 Realistically, the client should be in node, since that's what
 electron is in.
+
+D3's name comes from "data driven documents" so the code generator should also
+ask questions about the data model(s) and generate code to read/write data.
