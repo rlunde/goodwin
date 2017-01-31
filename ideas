@@ -19,3 +19,9 @@ electron is in.
 
 D3's name comes from "data driven documents" so the code generator should also
 ask questions about the data model(s) and generate code to read/write data.
+
+Part of asking questions should be (eventually at least) what language and (maybe)
+frameworks they are working in, or want to work in, so it can generate at least
+a stub project for a client/server app with a service and database in the
+desired language and a client in the appropriate framework (e.g. react, or vue).
+
