@@ -1,0 +1,6 @@
+Start with a bootstrap chat template, like:
+~/Downloads/Chat_box.html
+
+Initially, just get the chat interface displaying inside electron,
+and do something silly in response to any input.
+
