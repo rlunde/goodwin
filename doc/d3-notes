@@ -10,4 +10,17 @@ https://vida.io : d3 templates with a nice UI to help
    so I don't know how many templates they have or what
    they're like)
 
+One of the things I find most interesting about D3 and other
+javascript / SVG graphing tools is the interactivity. If all
+you want is a bar chart or a line graph or a pie chart, you
+could do that on the server side and be done with it. So the
+"data driven documents" part is interesting, but it's not the
+fun part. The code that interacts with the user and does
+cool graphical stuff in real time is what makes it fun, which
+is sometimes hard to figure out how to do in a purely declarative
+way.
+
+I'd like the generated code to be complete enough so that
+people know how and where to put in functional or procedural
+code to make it really fun.
 
