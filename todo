@@ -20,6 +20,11 @@ To Do Next:
 
 [ ] think through an initial design
 [ ] make the simplest possible thing just to get started
+  [ ] start off with tiny little code generators
+  [ ] make a module that asks questions and fills in a config struct
+  [ ] save and load config
+  [ ] just make it command line based -- forget the javascript / electron stuff at first
+  [ ] brainstorm a list of simple code generators and pick those that are original and fun
 [ ] try to make it fun, and funny -- make it a wiseass like Archie Goodwin in the books
 [ ] make a list of all the most popular code generators (e.g. in Rails), and see how
     they work. Look for things that can parse and ge-generate portions of code.
