@@ -25,3 +25,11 @@ frameworks they are working in, or want to work in, so it can generate at least
 a stub project for a client/server app with a service and database in the
 desired language and a client in the appropriate framework (e.g. react, or vue).
 
+-------------
+This looks like a fun starting point for using node from the command
+line. I figure I might be able to get some of the basics written as a simple
+CLI command, and then turn it into electron/node later.
+
+https://developer.atlassian.com/blog/2015/11/scripting-with-node/
+
+

@@ -9,3 +9,7 @@ $ npm install -g
 
 To run:
 $ goodwin-cli
+
+The amazing thing is I started this nearly a year ago, forgot entirely what
+I planned to use as a starting point for CLI, and ended up at the exact same
+article.
