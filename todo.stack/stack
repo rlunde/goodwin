@@ -1,6 +1,9 @@
 This is an example stack as I imagine it might be represented in funtodone (see
 that project) for goodwin.
 
+5: look at test frameworks for command line things in python, ruby, and node
+5: look at code generators in python, ruby, and node
+5: just choose one command line code generator to use as a model (not clone)
 4: make a capture/replay test framework for command line chat program
 4: make an example JSON format D3 sample project description
 4: include description in every JSON element (since we can't have comments)
