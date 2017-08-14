@@ -1,0 +1,9 @@
+I evaluated using python or ruby to do the CLI version, but
+since I want to eventually have an electron-based client, it
+made sense to stick with node.
+
+There's a cool article on making a python CLI here, though:
+https://stormpath.com/blog/building-simple-cli-interfaces-in-python
+
+The node article I'm starting with is:
+https://developer.atlassian.com/blog/2015/11/scripting-with-node/
