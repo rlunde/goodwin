@@ -1,48 +1,332 @@
-const d3visList = [
-"Alluvial Diagram",
-"Arc Diagram",
-"Area Chart/Stacked Graph",
-"Bar Chart, Radial Bar Chart",
-"Box And Whisker Plot/Candlestick Chart",
-"Bubble Cloud/Chart",
-"Cartogram",
-"Choropleth",
-"Connected Scatter Plot",
-"Contour/Isopleth/Isarithmic Map",
-"Customer Journey Map",
-"Dasymetric Map",
-"Dendrogram",
-"Dependency Graph/Circular Hierarchy",
-"Dot Distribution Map",
-"Gantt Chart",
-"Heat Map",
-"Histogram",
-"Hive Plot",
-"Hyperbolic Tree",
-"Icicle/Partition Chart",
-"Line Chart",
-"Matrix",
-"Mosaic Display/Marimekko Chart",
-"Node-Link Diagram",
-"Parallel Coordinates/Parallel Sets",
-"Pie Chart",
-"Polar Area/Rose/Circumplex Chart",
-"Proportional Symbol Map",
-"Radar/Spider Chart",
-"Radial Tree",
-"Ring Chart",
-"Sankey Diagram",
-"Scatter Plot",
-"Step Chart",
-"Stream Graph/ThemeRiver",
-"Subway/Tube Map",
-"Time Series",
-"Timeline",
-"Tree Map",
-"Unordered Bubble Chart/Bubble Cloud",
-"Venn Diagram",
-"Waterfall Chart",
-"Wedge Stack Graph (Radial Hierarchy)/Sunburst",
-"Word Cloud"
+/* supported?, name, example url, input function, generator function */
+const d3visList = [{
+    supported: false,
+    name: "Alluvial Diagram",
+    example: null,
+    inputfn: null,
+    genfn: null
+  },
+  {
+    supported: false,
+    name: "Arc Diagram",
+    example: null,
+    inputfn: null,
+    genfn: null
+  },
+  {
+    supported: false,
+    name: "Area Chart",
+    example: null,
+    inputfn: null,
+    genfn: null
+  },
+  {
+    supported: true,
+    name: "Bar Chart",
+    example: "https://bl.ocks.org/mbostock/3885304",
+    inputfn: "iBarChart",
+    genfn: "gBarChart"
+  },
+  {
+    supported: false,
+    name: "Box And Whisker Plot/Candlestick Chart",
+    example: null,
+    inputfn: null,
+    genfn: null
+  },
+  {
+    supported: false,
+    name: "Bubble Cloud/Chart",
+    example: null,
+    inputfn: null,
+    genfn: null
+  },
+  {
+    supported: false,
+    name: "Cartogram",
+    example: null,
+    inputfn: null,
+    genfn: null
+  },
+  {
+    supported: false,
+    name: "Choropleth",
+    example: null,
+    inputfn: null,
+    genfn: null
+  },
+  {
+    supported: false,
+    name: "Connected Scatter Plot",
+    example: null,
+    inputfn: null,
+    genfn: null
+  },
+  {
+    supported: false,
+    name: "Contour/Isopleth/Isarithmic Map",
+    example: null,
+    inputfn: null,
+    genfn: null
+  },
+  {
+    supported: false,
+    name: "Customer Journey Map",
+    example: null,
+    inputfn: null,
+    genfn: null
+  },
+  {
+    supported: false,
+    name: "Dasymetric Map",
+    example: null,
+    inputfn: null,
+    genfn: null
+  },
+  {
+    supported: false,
+    name: "Dendrogram",
+    example: null,
+    inputfn: null,
+    genfn: null
+  },
+  {
+    supported: false,
+    name: "Dependency Graph/Circular Hierarchy",
+    example: null,
+    inputfn: null,
+    genfn: null
+  },
+  {
+    supported: false,
+    name: "Dot Distribution Map",
+    example: null,
+    inputfn: null,
+    genfn: null
+  },
+  {
+    supported: false,
+    name: "Gantt Chart",
+    example: null,
+    inputfn: null,
+    genfn: null
+  },
+  {
+    supported: false,
+    name: "Heat Map",
+    example: null,
+    inputfn: null,
+    genfn: null
+  },
+  {
+    supported: false,
+    name: "Histogram",
+    example: null,
+    inputfn: null,
+    genfn: null
+  },
+  {
+    supported: false,
+    name: "Hive Plot",
+    example: null,
+    inputfn: null,
+    genfn: null
+  },
+  {
+    supported: false,
+    name: "Hyperbolic Tree",
+    example: null,
+    inputfn: null,
+    genfn: null
+  },
+  {
+    supported: false,
+    name: "Icicle/Partition Chart",
+    example: null,
+    inputfn: null,
+    genfn: null
+  },
+  {
+    supported: false,
+    name: "Line Chart",
+    example: null,
+    inputfn: null,
+    genfn: null
+  },
+  {
+    supported: false,
+    name: "Matrix",
+    example: null,
+    inputfn: null,
+    genfn: null
+  },
+  {
+    supported: false,
+    name: "Mosaic Display/Marimekko Chart",
+    example: null,
+    inputfn: null,
+    genfn: null
+  },
+  {
+    supported: false,
+    name: "Node-Link Diagram",
+    example: null,
+    inputfn: null,
+    genfn: null
+  },
+  {
+    supported: false,
+    name: "Parallel Coordinates/Parallel Sets",
+    example: null,
+    inputfn: null,
+    genfn: null
+  },
+  {
+    supported: false,
+    name: "Pie Chart",
+    example: null,
+    inputfn: null,
+    genfn: null
+  },
+  {
+    supported: false,
+    name: "Polar Area/Rose/Circumplex Chart",
+    example: null,
+    inputfn: null,
+    genfn: null
+  },
+  {
+    supported: false,
+    name: "Proportional Symbol Map",
+    example: null,
+    inputfn: null,
+    genfn: null
+  },
+  {
+    supported: false,
+    name: "Radar/Spider Chart",
+    example: null,
+    inputfn: null,
+    genfn: null
+  },
+  {
+    supported: false,
+    name: "Radial Bar Chart",
+    example: null,
+    inputfn: null,
+    genfn: null
+  },
+  {
+    supported: false,
+    name: "Radial Tree",
+    example: null,
+    inputfn: null,
+    genfn: null
+  },
+  {
+    supported: false,
+    name: "Ring Chart",
+    example: null,
+    inputfn: null,
+    genfn: null
+  },
+  {
+    supported: false,
+    name: "Sankey Diagram",
+    example: null,
+    inputfn: null,
+    genfn: null
+  },
+  {
+    supported: false,
+    name: "Scatter Plot",
+    example: null,
+    inputfn: null,
+    genfn: null
+  },
+  {
+    supported: false,
+    name: "Stacked Graph",
+    example: null,
+    inputfn: null,
+    genfn: null
+  },
+  {
+    supported: false,
+    name: "Step Chart",
+    example: null,
+    inputfn: null,
+    genfn: null
+  },
+  {
+    supported: false,
+    name: "Stream Graph/ThemeRiver",
+    example: null,
+    inputfn: null,
+    genfn: null
+  },
+  {
+    supported: false,
+    name: "Subway/Tube Map",
+    example: null,
+    inputfn: null,
+    genfn: null
+  },
+  {
+    supported: false,
+    name: "Time Series",
+    example: null,
+    inputfn: null,
+    genfn: null
+  },
+  {
+    supported: false,
+    name: "Timeline",
+    example: null,
+    inputfn: null,
+    genfn: null
+  },
+  {
+    supported: false,
+    name: "Tree Map",
+    example: null,
+    inputfn: null,
+    genfn: null
+  },
+  {
+    supported: false,
+    name: "Unordered Bubble Chart/Bubble Cloud",
+    example: null,
+    inputfn: null,
+    genfn: null
+  },
+  {
+    supported: false,
+    name: "Venn Diagram",
+    example: null,
+    inputfn: null,
+    genfn: null
+  },
+  {
+    supported: false,
+    name: "Waterfall Chart",
+    example: null,
+    inputfn: null,
+    genfn: null
+  },
+  {
+    supported: false,
+    name: "Wedge Stack Graph (Radial Hierarchy)/Sunburst",
+    example: null,
+    inputfn: null,
+    genfn: null
+  },
+  {
+    supported: false,
+    name: "Word Cloud",
+    example: null,
+    inputfn: null,
+    genfn: null
+  }
 ];
 module.exports.d3visList = d3visList;
