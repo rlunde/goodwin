@@ -35,7 +35,8 @@ rl.on('line', (line) => {
     } else {
       console.log(`couldn't find a D3 visualization named: ${line}`)
     }
-    let input = d3input.input(vis.inputfn);
+    let inputFn = d3input.input(vis.inputfn);
+    let inputValues = inputFn(rl);
     rl.close();
   }
 });
