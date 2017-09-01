@@ -1,14 +1,16 @@
 #!/usr/bin/env node
+var co = require('co');
+var prompt = require('co-prompt');
+// Note: if I need to read a password at some point, use https://github.com/npm/read instead of readline
+const readline = require('readline');
 
+// Other files in this repository:
 const d3types = require('./d3types');
 const d3input = require('./inputfns');
 
 console.log('Let\'s have a conversation!');
 var file = "sample.js";
 console.log('Note: The info about the code to be generated will be saved in file: %s\n', file);
-
-// Note: if I need to read a password at some point, use https://github.com/npm/read instead of readline
-const readline = require('readline');
 
 console.log('What kind of D3 graph or chart do you want to create?\n(Or type "list" to see options, or "quit" to quit)\n');
 
