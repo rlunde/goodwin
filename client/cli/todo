@@ -1,0 +1,6 @@
+
+[ ] read how the various co/co-prompt/readline things work
+[ ] write an architecture for the client (based on state, state transitions, event loop)
+[ ] refactor to create a state, state machine, and start event loop that has a termination event
+[ ] collect the parameters needed for a bar chart
+[ ] write a sample bar chart with index.html that calls it in a directory
