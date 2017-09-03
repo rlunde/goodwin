@@ -1,12 +1,11 @@
 #!/usr/bin/env node
-var co = require('co');
-var prompt = require('co-prompt');
 // Note: if I need to read a password at some point, use https://github.com/npm/read instead of readline
 const readline = require('readline');
 
 // Other files in this repository:
 const d3types = require('./d3types');
 const d3input = require('./inputfns');
+process.stdin.setEncoding('utf8');
 
 console.log('Let\'s have a conversation!');
 var file = "sample.js";
@@ -38,7 +37,10 @@ rl.on('line', (line) => {
       console.log(`couldn't find a D3 visualization named: ${line}`)
     }
     let inputFn = d3input.input(vis.inputfn);
-    let inputValues = inputFn(rl);
-    rl.close();
+    // let inputValues = inputFn(rl);
+    // rl.close();
   }
 });
+rl.on('close', (line) => {
+  console.log("you ended input");
+})
