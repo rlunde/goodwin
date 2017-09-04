@@ -1,5 +1,6 @@
 
 [ ] write an architecture for the client (based on state, state transitions, event loop)
 [ ] refactor to create a state, state machine, and start event loop that has a termination event
+[ ] evaluate using redux (or similar) to manage state
 [ ] collect the parameters needed for a bar chart
 [ ] write a sample bar chart with index.html that calls it in a directory
