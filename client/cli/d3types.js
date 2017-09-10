@@ -16,7 +16,7 @@ const d3visList = [{
   {
     supported: false,
     name: "Area Chart",
-    example: null,
+    example: "https://bl.ocks.org/mbostock/3883195",
     inputfn: null,
     genfn: null
   },
