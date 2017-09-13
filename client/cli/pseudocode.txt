@@ -1,0 +1,15 @@
+This is just a description of the main processing loop does. I figured I'd
+start out with a description, then extract objects/functions/etc.
+
+1) Initialize
+  a) set handlers for a new line of input and quit events like ^D
+  b) print out basic identity/version data and the expected kind of input
+
+2) Loop
+  a) prompt '>' or a custom prompt if in a special state
+  b) wait for input
+  c) determine response based on input
+
+3) If input is a gen command
+4) If input is quit
+...
