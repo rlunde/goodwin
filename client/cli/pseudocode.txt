@@ -8,8 +8,41 @@ start out with a description, then extract objects/functions/etc.
 2) Loop
   a) prompt '>' or a custom prompt if in a special state
   b) wait for input
-  c) determine response based on input
+  c) dispatch input to event handler
 
-3) If input is a gen command
-4) If input is quit
+Event Handler:
+
+A) Handle the current input
+  1) If waiting for the response to a question
+    a) if the input is an answer
+    b) else if the input is a command
+    c) else prompt
+  2) If input is quit
+    a) push the quit command onto the action stack
+    b) if there is unsaved state, ask if want to save it (push question on stack)
+    c) else quit
+  3) If input is a gen command
+    a) push gen action onto stack
+    b) push questions on stack
+    c) set state params to say which gen command
+  4) If input is list
+    a) push list action onto stack
+  5) If input is load or save
+    a) push action onto stack
+    b) push question(s) on stack
+B) Execute action on top of stack
+  1) if action is a question
+    a) prompt the question
+    b) set state to waiting for response
+    c) set other state params to say what we're waiting for
+  2) if action is list
+    a) list D3 visualizations
+  3) if action is help
+    a) list operations
+  4) if action is load
+    a) make sure params can be used (file and directory)
+    b) read state
+  5) if action is save
+    a) make sure params can be used (file and directory)
+    b) save state
 ...
