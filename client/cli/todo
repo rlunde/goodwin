@@ -4,3 +4,27 @@
 [ ] evaluate using redux (or similar) to manage state
 [ ] collect the parameters needed for a bar chart
 [ ] write a sample bar chart with index.html that calls it in a directory
+
+
+// Note: if I need to read a password at some point, use https://github.com/npm/read instead of readline
+
+// if (line == 'list') {
+//   d3types.d3visList.map((t) => console.log(t.name));
+//   console.log('\nWhat kind of D3 graph or chart do you want to create?\n(Or type "list" to see options, or "quit" to quit)\n');
+//   rl.prompt();
+// } else if (line == 'quit') {
+//   rl.close();
+// } else {
+// TODO: readline supports tab completion -- try using it on D3 types
+//   let vis = d3types.d3visList.find((el) => {
+//     return el.name.toLowerCase().startsWith(line.toLowerCase());
+//   });
+//   if (vis != undefined) {
+//     console.log("you chose " + vis.name);
+//   } else {
+//     console.log(`couldn't find a D3 visualization named: ${line}`)
+//   }
+//   let inputFn = d3input.input(vis.inputfn);
+//   // let inputValues = inputFn(rl);
+//   // rl.close();
+// }
