@@ -33,3 +33,4 @@ const states = [{
   }
 ];
 module.exports.states = states;
+module.exports.STATE_GET_CMD = STATE_GET_CMD;
