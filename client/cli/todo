@@ -1,20 +1,15 @@
 
-[ ] write an architecture for the client (based on state, state transitions, event loop)
-[ ] refactor to create a state, state machine, and start event loop that has a termination event
-[ ] evaluate using redux (or similar) to manage state
+[x] write pseudocode for an initial pass at collecting data and generating code
 [ ] collect the parameters needed for a bar chart
+  [ ] prompt for a command
+  [ ] push the state (STATE_GET_CMD)
+  [ ] handle list, quit, help, or <cmd> as described in pseudocode
+  [ ] collect type of data file (postpone option of using API to get data)
+  [ ] 
 [ ] write a sample bar chart with index.html that calls it in a directory
-
 
 // Note: if I need to read a password at some point, use https://github.com/npm/read instead of readline
 
-// if (line == 'list') {
-//   d3types.d3visList.map((t) => console.log(t.name));
-//   console.log('\nWhat kind of D3 graph or chart do you want to create?\n(Or type "list" to see options, or "quit" to quit)\n');
-//   rl.prompt();
-// } else if (line == 'quit') {
-//   rl.close();
-// } else {
 // TODO: readline supports tab completion -- try using it on D3 types
 //   let vis = d3types.d3visList.find((el) => {
 //     return el.name.toLowerCase().startsWith(line.toLowerCase());
