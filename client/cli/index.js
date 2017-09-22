@@ -15,15 +15,16 @@ const rl = readline.createInterface({
   output: process.stdout
 });
 
-let state = new Array();
-var getCmdState = states.states.filter(state => state.id === states.STATE_GET_CMD);
-state.push(getCmdState);
+let stateStack = new Array();
+var getCmdState = states.states.filter(state => state.id === states.STATE_INITIAL);
+stateStack.push(getCmdState);
+console.log("stateStack = " + stateStack)
 let actionStack = new Array();
 actionStack.push("PROMPT_FOR_CMD"); // TODO -- think about this
 // we pass readline so we can quit input, prompt, etc. from within the event handler
-handleInput.setConfig(rl, state, actionStack);
+handleInput.setConfig(rl, stateStack, actionStack);
 
-rl.prompt();
+handleInput.actionPrompt();
 
 rl.on('line', (line) => {
   handleInput.onLine(line);
