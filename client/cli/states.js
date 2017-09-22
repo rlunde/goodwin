@@ -2,9 +2,11 @@
  * Keep track of what state we're in, what to display before
  * a prompt, what to prompt, what commands to accept.
  */
-const STATE_GET_CMD = 1,
-  STATE_GET_PARAMS = 2,
-  STATE_CONFIRM = 3;
+const
+  STATE_INITIAL = 1,
+  STATE_GET_CMD = 2,
+  STATE_GET_PARAMS = 3,
+  STATE_CONFIRM = 4;
 const cmdHelp = `At any time you can type:
 quit - to exit
 help (or just ?) - to get some help
@@ -15,10 +17,15 @@ list - show the types of D3 visualizations I can generate
 save - to save the current session for later
 load - to load a previously saved session`
 
-const states = [{
+const states = [
+  {
+    id: STATE_INITIAL,
+    name: "Init",
+    prompt: `Hello! I'm Goodwin. I'll help you generate D3 sample code.\n` + cmdHelp
+    },
+  {
     id: STATE_GET_CMD,
     name: "Start",
-    firstprompt: `Hello! I'm Goodwin. I'll help you generate D3 sample code.\n` + cmdHelp,
     prompt: `Enter a command (help or just ? for the list)`
   },
   {
@@ -33,4 +40,8 @@ const states = [{
   }
 ];
 module.exports.states = states;
+// TODO: find a nicer way that to export this one by one
 module.exports.STATE_GET_CMD = STATE_GET_CMD;
+module.exports.STATE_INITIAL = STATE_INITIAL;
+module.exports.STATE_GET_PARAMS = STATE_GET_PARAMS;
+module.exports.STATE_CONFIRM = STATE_CONFIRM;
