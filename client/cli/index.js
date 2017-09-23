@@ -8,7 +8,7 @@ const handleInput = require('./handle-input');
 const states = require('./states');
 process.stdin.setEncoding('utf8');
 
-console.log('What kind of D3 graph or chart do you want to create?\n(Or type "list" to see options, or "quit" to quit)\n');
+//console.log('What kind of D3 graph or chart do you want to create?\n(Or type "list" to see options, or "quit" to quit)\n');
 
 const rl = readline.createInterface({
   input: process.stdin,
@@ -16,9 +16,9 @@ const rl = readline.createInterface({
 });
 
 let stateStack = new Array();
-var getCmdState = states.states.filter(state => state.id === states.STATE_INITIAL);
+var getCmdState = states.getState("INITIAL");
 stateStack.push(getCmdState);
-console.log("stateStack = " + stateStack)
+//console.log("stateStack = " + stateStack)
 let actionStack = new Array();
 actionStack.push("PROMPT_FOR_CMD"); // TODO -- think about this
 // we pass readline so we can quit input, prompt, etc. from within the event handler
