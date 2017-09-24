@@ -24,7 +24,21 @@ const onLine = function(line) {
     config.readline.close();
   } else {
     // TODO - all the other commands
-    console.log(`you entered: ${line}\n`);
+    // console.log(`you entered: ${line}\n`);
+    if (line === 'help' || line === '?') {
+      console.log(states.help);
+    }
+    else if (line.toLowerCase().startsWith('gen ')) {
+      let cmd = line.substring(4);
+      let vis = d3types.findVis(cmd);
+      if (vis === null) {
+        console.log(`couldn't find a D3 visualization for ${cmd}`);
+      }
+      else {
+        // TODO
+        console.log(`picked D3 visualization: ${vis}`)
+      }
+    }
     actionPrompt();
   }
 
