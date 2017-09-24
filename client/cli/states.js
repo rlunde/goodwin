@@ -45,3 +45,4 @@ const getState = (s) => {
 }
 module.exports.states = states;
 module.exports.getState = getState;
+module.exports.help = cmdHelp;
