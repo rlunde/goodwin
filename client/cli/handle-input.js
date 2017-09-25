@@ -10,7 +10,8 @@ let config = {}
 const setConfig = function(rl, stateStack, actionStack) {
   config.readline = rl;
   config.stateStack = stateStack;
-  config.actionStack = actionStack
+  config.actionStack = actionStack;
+  config.vis = null;
 }
 const onLine = function(line) {
   config.stateStack.pop();
@@ -36,7 +37,10 @@ const onLine = function(line) {
       }
       else {
         // TODO
-        console.log(`picked D3 visualization: ${vis}`)
+        console.log(`You picked D3 visualization: ${vis.name}`);
+        config.vis = vis;
+        var getParamsState = states.getState("GET_PARAMS");
+        config.stateStack.push(getParamsState);
       }
     }
     actionPrompt();
@@ -52,7 +56,11 @@ const actionPrompt = function() {
     // TODO: what should this be?
     config.readline.prompt(' >');
   } else {
-    config.readline.prompt(' >');
+    if (s.name === "GET_PARAMS") {
+      
+    } else {
+      config.readline.prompt(' >');
+    }
   }
 }
 module.exports.setConfig = setConfig;
