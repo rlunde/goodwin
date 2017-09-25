@@ -330,12 +330,16 @@ const d3visList = [{
   }
 ];
 function findVis(name) {
+  //console.log(`findVis: looking for ${name}`);
+  let lcn = name.toLowerCase();
   let list = d3visList.filter((vis) => {
-    vis.name.toLowerCase().startsWith(name.toLowerCase);
+    let v = vis.name.toLowerCase();
+    return v.startsWith(lcn);
   });
   if (list.length > 0) {
     return list[0];
   }
+  console.log(`Couldn't find any visualization starting with ${name}`);
   return null;
 }
 module.exports.d3visList = d3visList;
