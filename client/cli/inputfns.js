@@ -16,6 +16,22 @@ var funcs = {
         type: "directory",
         set: false,
         default: "sample_bar_chart"
+      },
+      bars: {
+        color: "blue",
+        hoverColor: "red"
+      },
+      domain: { // x-axis
+        min: 0,
+        max: 100
+      },
+      range: { // y-axis
+        min: 0,
+        max: 100
+      },
+      data: {
+        type: "csv", // or tsv, or api
+        source: "input.csv" // use a URL if api
       }
     }
   }
