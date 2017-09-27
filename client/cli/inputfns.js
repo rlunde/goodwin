@@ -17,21 +17,58 @@ var funcs = {
         set: false,
         default: "sample_bar_chart"
       },
-      bars: {
-        color: "blue",
-        hoverColor: "red"
+      barColor: {
+        name: "bar color",
+        type: "color",
+        set: false,
+        default: "blue"
       },
-      domain: { // x-axis
-        min: 0,
-        max: 100
+      barHoverColor: {
+        name: "bar hover color",
+        type: "color",
+        set: false,
+        default: "red"
+      },
+      domain: {
+        min: {
+          name: "domain min (x-axis)",
+          type: "number",
+          set: false,
+          default: 0
+        },
+        max: {
+          name: "domain max (x-axis)",
+          type: "number",
+          set: false,
+          default: 100
+        }
       },
       range: { // y-axis
-        min: 0,
-        max: 100
+        min: {
+          name: "range min (y-axis)",
+          type: "number",
+          set: false,
+          default: 0
+        },
+        max: {
+          name: "range max (y-axis)",
+          type: "number",
+          set: false,
+          default: 100
+        }
       },
-      data: {
-        type: "csv", // or tsv, or api
-        source: "input.csv" // use a URL if api
+      data_type: {
+        name: "data source type",
+        type: "choice", // or tsv, or api
+        selections: ["csv", "tsv", "api"],
+        default: "csv",
+        set: false
+      },
+      data_source: {
+        name: "data source",
+        type: "string",
+        default: "input.csv",
+        set: false
       }
     }
   }
