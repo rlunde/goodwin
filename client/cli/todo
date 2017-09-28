@@ -1,25 +1,14 @@
 
 [x] write pseudocode for an initial pass at collecting data and generating code
 [ ] collect the parameters needed for a bar chart
-  [ ] prompt for a command
-  [ ] push the state (STATE_GET_CMD)
-  [ ] handle list, quit, help, or <cmd> as described in pseudocode
+  [x] prompt for a command
+  [x] push the state (STATE_GET_CMD)
+  [ ] handle list, quit, help, or gen <vis> as described in pseudocode
   [ ] collect type of data file (postpone option of using API to get data)
-  [ ] 
 [ ] write a sample bar chart with index.html that calls it in a directory
 
 // Note: if I need to read a password at some point, use https://github.com/npm/read instead of readline
 
-// TODO: readline supports tab completion -- try using it on D3 types
-//   let vis = d3types.d3visList.find((el) => {
-//     return el.name.toLowerCase().startsWith(line.toLowerCase());
-//   });
-//   if (vis != undefined) {
-//     console.log("you chose " + vis.name);
-//   } else {
-//     console.log(`couldn't find a D3 visualization named: ${line}`)
-//   }
-//   let inputFn = d3input.input(vis.inputfn);
-//   // let inputValues = inputFn(rl);
-//   // rl.close();
-// }
+I went to an interesting talk tonight on coroutines and generators (in python), which
+may be exactly the kind of thing I need for an event loop like the one I want. I'm
+off to see what node.js has along those lines...

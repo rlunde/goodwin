@@ -2,6 +2,8 @@
 function inputFunction(name) {
   let fn = funcs[name];
   if (fn != undefined) {
+    let props = fn();
+    fn.printArgs = () => printArgs(props);
     return fn;
   } else {
     console.log("undefined input function: " + name)
@@ -71,7 +73,24 @@ var funcs = {
         set: false
       }
     }
+    return props;
   }
+}
+let printArgs = function(props) {
+  for (var key in props) {
+      if (props.hasOwnProperty(key)) {
+        let p = props[key];
+        console.log(`key: ${key}, props: ${props}, props[key]: ${p}`)
+        if (p.name != null) {
+          if (p.set && p.value != null) {
+            console.log(`${p.name}: ${p.value}`);
+          }
+          else {
+            console.log(`${p.name}: ${p.default} (default)`);
+          }
+        }
+      }
+    }
 }
 
 module.exports.input = inputFunction;

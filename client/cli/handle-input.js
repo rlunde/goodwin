@@ -41,6 +41,7 @@ const onLine = function(line) {
         config.vis = vis;
         var getParamsState = states.getState("GET_PARAMS");
         config.stateStack.push(getParamsState);
+        config.actionStack.push("GET_PARAMS");
       }
     }
     actionPrompt();
@@ -54,11 +55,16 @@ const actionPrompt = function() {
   console.log(`\n${s.prompt}`);
   if (a === "PROMPT_FOR_CMD") {
     // TODO: what should this be?
+    console.log(`a is ${a}`)
     config.readline.prompt(' >');
   } else {
-    if (s.name === "GET_PARAMS") {
-      
+    if (s.id === "GET_PARAMS") {
+
+      let fn = d3input.input(config.vis.inputfn);
+      console.log(`fn is ${fn}`);
+      fn.printArgs();
     } else {
+      console.log(`s.id is ${s.id}`)
       config.readline.prompt(' >');
     }
   }
