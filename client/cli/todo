@@ -12,3 +12,20 @@
 I went to an interesting talk tonight on coroutines and generators (in python), which
 may be exactly the kind of thing I need for an event loop like the one I want. I'm
 off to see what node.js has along those lines...
+
+Here are some recommended python link:
+http://www.dabeaz.com/coroutines/Coroutines.pdf
+David Beazley's 3 hour tour of the above: https://www.youtube.com/watch?v=Z_OAlIhXziw
+https://www.python.org/dev/peps/pep-0342/
+
+And other python links:
+http://masnun.com/2015/11/13/python-generators-coroutines-native-coroutines-and-async-await.html
+https://docs.python.org/3/library/asyncio-task.html
+
+
+Here are some javascript links:
+Generator functions: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/function*
+Callbacks vs coroutines: https://medium.com/@tjholowaychuk/callbacks-vs-coroutines-174f1fe66127
+https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Iterators_and_Generators
+https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Generator
+https://github.com/tj/co <- I looked at this before, and didn't know what it was
