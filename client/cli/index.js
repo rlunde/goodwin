@@ -1,4 +1,5 @@
 #!/usr/bin/env node
+
 const readline = require('readline');
 
 // Other files in this repository:
@@ -16,15 +17,15 @@ const rl = readline.createInterface({
 });
 
 let stateStack = new Array();
-var getCmdState = states.getState("INITIAL");
-stateStack.push(getCmdState);
+var initialState = states.getState("INITIAL");
+var cmdState = states.getState("GET_CMD");
+stateStack.push(cmdState);
 //console.log("stateStack = " + stateStack)
-let actionStack = new Array();
-actionStack.push("PROMPT_FOR_CMD"); // TODO -- think about this
 // we pass readline so we can quit input, prompt, etc. from within the event handler
-handleInput.setConfig(rl, stateStack, actionStack);
+handleInput.setConfig(rl, stateStack);
 
-handleInput.actionPrompt();
+// only show the menu once unless they ask for help/?
+console.log(`\n${initialState.prompt}`);
 
 rl.on('line', (line) => {
   handleInput.onLine(line);
