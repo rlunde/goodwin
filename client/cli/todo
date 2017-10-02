@@ -3,8 +3,14 @@
 [ ] collect the parameters needed for a bar chart
   [x] prompt for a command
   [x] push the state (STATE_GET_CMD)
-  [ ] handle list, quit, help, or gen <vis> as described in pseudocode
+  [x] handle list, quit, help
+  [ ] handle gen <vis> as described in pseudocode
   [ ] collect type of data file (postpone option of using API to get data)
+  [ ] version 1: just read from a file, but with a promise in a wrapper function
+  [ ] collect number of bars
+  [ ] collect colors
+  [ ] code should collect min and max values from data (not input)
+  [ ] options for labels should be ints or values from another data file?
 [ ] write a sample bar chart with index.html that calls it in a directory
 
 // Note: if I need to read a password at some point, use https://github.com/npm/read instead of readline
