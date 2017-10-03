@@ -18,14 +18,10 @@ const rl = readline.createInterface({
 
 let stateStack = new Array();
 var initialState = states.getState("INITIAL");
-var cmdState = states.getState("GET_CMD");
-stateStack.push(cmdState);
-//console.log("stateStack = " + stateStack)
+stateStack.push(initialState);
+
 // we pass readline so we can quit input, prompt, etc. from within the event handler
 handleInput.setConfig(rl, stateStack);
-
-// only show the menu once unless they ask for help/?
-console.log(`\n${initialState.prompt}`);
 
 rl.on('line', (line) => {
   handleInput.onLine(line);
@@ -34,3 +30,6 @@ rl.on('line', (line) => {
 rl.on('close', (line) => {
   console.log("Goodbye!");
 })
+
+// fake a first line, to take us from the initial state to cmd state
+handleInput.onLine('');
