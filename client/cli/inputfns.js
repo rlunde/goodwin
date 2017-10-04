@@ -1,12 +1,15 @@
 /* supported?, name, example url, input function, generator function */
-function inputFunction(name) {
-  let fn = funcs[name];
+function inputFunction(vis) {
+  //console.log(`inputFunction passed ${JSON.stringify(vis)}`)
+  let fn = funcs[vis.inputfn];
   if (fn != undefined) {
     let props = fn();
-    fn.printArgs = () => printArgs(props);
+    console.log(`printArgs is ${JSON.stringify(printArgs)}`);
+    let gen = argsGenerator(vis, props);
+    fn.nextArg = () => gen.next().value;
     return fn;
   } else {
-    console.log("undefined input function: " + name)
+    console.log("undefined input function: " + vis.name)
     return undefined
   }
 }
@@ -76,21 +79,43 @@ var funcs = {
     return props;
   }
 }
-let printArgs = function(props) {
+let argsGenerator = function *(vis, props) {
+  console.log(`parameters for: ${vis.name}`);
   for (var key in props) {
       if (props.hasOwnProperty(key)) {
         let p = props[key];
-        console.log(`key: ${key}, props: ${props}, props[key]: ${p}`)
+        //console.log(`${key}, props: ${props}, props[key]: ${p}`)
         if (p.name != null) {
           if (p.set && p.value != null) {
-            console.log(`${p.name}: ${p.value}`);
+            console.log(`    ${p.name} (${p.value}) > `);
+            yield p;
           }
           else {
-            console.log(`${p.name}: ${p.default} (default)`);
+            console.log(`    ${p.name} (${p.default} (default) ) > `);
+            yield p;
           }
         }
       }
     }
 }
+
+var printArgs = argsGenerator();
+// let printArgs = function(vis, props) {
+//   console.log(`parameters for: ${vis.name}`);
+//   for (var key in props) {
+//       if (props.hasOwnProperty(key)) {
+//         let p = props[key];
+//         //console.log(`${key}, props: ${props}, props[key]: ${p}`)
+//         if (p.name != null) {
+//           if (p.set && p.value != null) {
+//             console.log(`    ${p.name}: ${p.value}`);
+//           }
+//           else {
+//             console.log(`    ${p.name}: ${p.default} (default)`);
+//           }
+//         }
+//       }
+//     }
+// }
 
 module.exports.input = inputFunction;
