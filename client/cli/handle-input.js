@@ -49,11 +49,14 @@ const onLine = function(line) {
       }
     }
     if (s.id === "GET_PARAMS") {
-      let fn = d3input.input(config.vis.inputfn);
-      console.log(`fn is ${fn}`);
-      fn.printArgs();
+      if (!s.infn) {
+        s.infn = d3input.input(config.vis);
+      }
+      param = s.infn.nextArg();
+      console.log(`param = ${JSON.stringify(param)}`);
     } else {
-      console.log(`you entered: ${line}\nCurrent state is ${JSON.stringify(s)}`);
+      // console.log(`The current state is ${s.id}`);
+      console.log(`you entered: ${line}`);
     }
   }
   config.readline.prompt(' >');
