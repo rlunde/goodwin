@@ -7,3 +7,9 @@ https://stormpath.com/blog/building-simple-cli-interfaces-in-python
 
 The node article I'm starting with is:
 https://developer.atlassian.com/blog/2015/11/scripting-with-node/
+
+If I move on to a node environment with automatic babel compilation
+(which seems like a good thing to try), I might start here:
+
+https://github.com/babel/example-node-server
+
