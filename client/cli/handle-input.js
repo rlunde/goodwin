@@ -52,7 +52,7 @@ const onLine = function(line) {
       if (!s.infn) {
         s.infn = d3input.input(config.vis);
       }
-      param = s.infn.nextArg();
+      let param = s.infn.nextArg();
       console.log(`param = ${JSON.stringify(param)}`);
     } else {
       // console.log(`The current state is ${s.id}`);

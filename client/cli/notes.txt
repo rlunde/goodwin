@@ -26,3 +26,28 @@ I may write a version of this that uses them and write about that in a blog. Or 
 https://github.com/tj/co
 https://github.com/tj/co/wiki
 https://github.com/tj/co-prompt
+
+I tried installing node-debug, and got an error:
+===============
+$ npm install -g node-inspector
+
+> v8-profiler@5.7.0 preinstall /usr/local/lib/node_modules/node-inspector/node_modules/v8-profiler
+> node -e 'process.exit(0)'
+
+npm ERR! Cannot read property 'pause' of undefined
+===============
+The online docs I saw said to downgrade npm to 5.3.0 to work around it, so I did this:
+npm install -g npm@5.3.0
+
+That installed it OK, but node-debug crashed:
+
+node-debug index.js
+module.js:487
+    throw err;
+    ^
+
+Error: Cannot find module '_debugger'
+    at Function.Module._resolveFilename (module.js:485:15)
+
+It looks like that's a problem with NodeJS 8. Time to take a step back and try
+something else.
