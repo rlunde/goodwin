@@ -5,11 +5,11 @@
   [x] push the state (STATE_GET_CMD)
   [x] handle list, quit, help
   [ ] handle gen <vis> as described in pseudocode
+  [ ] collect location to write sample code
   [ ] collect type of data file (postpone option of using API to get data)
   [ ] version 1: just read from a file, but with a promise in a wrapper function
-  [ ] collect number of bars
   [ ] collect colors
-  [ ] code should collect min and max values from data (not input)
+  [ ] for number of bars, domain, and range, code should collect min and max values from data (not input)
   [ ] options for labels should be ints or values from another data file?
 [ ] write a sample bar chart with index.html that calls it in a directory
 
