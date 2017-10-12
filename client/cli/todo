@@ -1,5 +1,10 @@
 
 [x] write pseudocode for an initial pass at collecting data and generating code
+[ ] take another step back? Use of a generator function with "yield" for input processing is over-complicated
+  [ ] just do an async event loop with on('line') -- no generator function
+  [ ] keep the current state as a hash, not a stack
+  [ ] use a function to know what to prompt for
+  [ ] use a function to see if what is input is what was prompted for, or something else.
 [ ] collect the parameters needed for a bar chart
   [x] prompt for a command
   [x] push the state (STATE_GET_CMD)
