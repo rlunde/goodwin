@@ -51,3 +51,6 @@ Error: Cannot find module '_debugger'
 
 It looks like that's a problem with NodeJS 8. Time to take a step back and try
 something else.
+
+I installed VS Code, and it let me debug the node script a lot more easily (still had
+to figure out setting the configuration parameter: "console":"integratedTerminal")
