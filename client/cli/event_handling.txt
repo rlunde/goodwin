@@ -1,0 +1,42 @@
+
+I think my current approach, of using a generator function
+in inputfns.js that iterates over a list of needed parameters
+and "yields" to get input for each one, is too complicated
+and not complicated enough.
+
+The way the on(line) input works, each input event is
+treated generically, so it's possible for the user to type
+anything -- like "quit" or "gen foo" or whatever -- when
+what we want is a parameter value.
+
+On the other hand, we don't want to force the user to fill
+in all the values if they change their mind.
+
+There needs to be a way to determine what the user wants that
+doesn't make the code convoluted or the UX/UI very strange.
+
+I could either put together a regular HTML form, and have
+a "chat" interface that controls which forms are used (seems
+like that has even more issues), or else figure out a way
+to prompt for the next thing and wait for it, with a simple
+generic escape function (like ESC).
+
+So I could actually use an object that says what I'm specifically
+asking for along with a prompt, with ESC used to stop prompting 
+and go all the way back to the command level. The prompt could be
+multi-line, like:
+
+Data source type?
+   possible values: csv, tsv, api
+   (or use "help" or "?" for more info on available commands)
+   default value: csv
+   current value: csv
+> 
+
+Some parameters are going to depend on the values of other
+parameters, probably. For my first cut, I should probably
+have a function that decides whether there are remaining
+unanswered questions for the current command. If there aren't,
+just list the parameters and ask if they want to generate
+code.
+
