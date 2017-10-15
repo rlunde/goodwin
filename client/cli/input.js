@@ -1,4 +1,3 @@
-
 const cmdHelp = `At any time you can type:
 quit - to exit
 help (or just ?) - to get some help
@@ -12,7 +11,7 @@ load - to load a previously saved session`;
 const d3types = require('./d3types');
 
 let config = {};
-const setConfig = function(rl) {
+const setConfig = function (rl) {
   config.readline = rl;
   config.vis = null;
 };
@@ -21,16 +20,22 @@ const setConfig = function(rl) {
  * a line (an event), figure out what to do, do it, then print
  * a prompt for the next line.
  */
-const onLine = function(line) {
-    if (line === 'quit') {
-      // TODO: confirm quit if we could lose data
-      config.readline.close();
-      return;
+const onLine = function (line) {
+  if (line === 'quit') {
+    // TODO: confirm quit if we could lose data
+    config.readline.close();
+    return;
+  } else if (line === 'help' || line === '?') {
+    console.log(cmdHelp);
+    return;
+  } else if (expectingAnswer) {
+    if (isAnswer(line)) {
+      //TODO: update context
     }
-    else if (line === 'help' || line === '?') {
-      console.log(cmdHelp);
-      return;
-    }
+  }
+  //TODO: if we're looking for specific answers, ask next question
+  //TODO: otherwise if we get a command, do it or ask for details
+  //TODO: otherwise say we don't understand
 };
 
 module.exports.help = cmdHelp;
