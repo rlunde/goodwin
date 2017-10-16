@@ -13,7 +13,9 @@ const d3types = require('./d3types');
 let config = {};
 const setConfig = function (rl) {
   config.readline = rl;
-  config.vis = null;
+  config.context = {};
+  config.context.vis = null;
+  config.context.expectingAnswer = false;
 };
 /*
  * Unlike a standard prompt->response model, we have to wait for
@@ -28,7 +30,7 @@ const onLine = function (line) {
   } else if (line === 'help' || line === '?') {
     console.log(cmdHelp);
     return;
-  } else if (expectingAnswer) {
+  } else if (config.context.expectingAnswer) {
     if (isAnswer(line)) {
       //TODO: update context
     }
@@ -37,6 +39,58 @@ const onLine = function (line) {
   //TODO: otherwise if we get a command, do it or ask for details
   //TODO: otherwise say we don't understand
 };
+const inputTypes = {
+  sourceDir: {
+    name: "sample code directory",
+    type: "directory",
+    set: false,
+    default: "sample_bar_chart"
+  },
+  barColor: {
+    name: "bar color",
+    type: "color",
+    set: false,
+    default: "blue"
+  },
+  barHoverColor: {
+    name: "bar hover color",
+    type: "color",
+    set: false,
+    default: "red"
+  },
+  dataType: {
+    name: "data source type",
+    type: "choice", // or tsv, or api
+    selections: ["csv", "tsv", "api"],
+    default: "csv",
+    set: false
+  },
+  dataSource: {
+    name: "data source",
+    type: "string",
+    default: "input.csv",
+    set: false
+  }
+}
+
+function isAnswer(line) {
+  if (!config.context.expectingAnswer) {
+    return false;
+  }
+  let it = config.context.inputType;
+  if (it === undefined) {
+    return false;
+  }
+  if (inputTypes[it] != undefined) {
+    let t = inputTypes[it].type;
+    let d = inputTypes[it].default;
+    if (t === "string") {
+      return true;
+    }
+  } else {
+    return false;
+  }
+}
 
 module.exports.help = cmdHelp;
 module.exports.setConfig = setConfig;
