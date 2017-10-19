@@ -86,6 +86,15 @@ function isAnswer(line) {
     let d = inputTypes[it].default;
     if (t === "string") {
       return true;
+    } else if (t === "directory") {
+      //TODO: ask if we should create the directory if it doesn't exist
+    } else if (t === "color") {
+      //TODO: look at: https://github.com/colorjs/color-name and https://github.com/regexhq/hex-color-regex
+      //for now, assume any string is a name or a hex value, but later check against real names and a regex
+      return true;
+    } else if (t === "choice") {
+      //TODO
+
     }
   } else {
     return false;
