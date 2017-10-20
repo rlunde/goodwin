@@ -77,30 +77,62 @@ function isAnswer(line) {
   if (!config.context.expectingAnswer) {
     return false;
   }
-  let it = config.context.inputType;
-  if (it === undefined) {
-    return false;
-  }
-  if (inputTypes[it] != undefined) {
-    let t = inputTypes[it].type;
-    let d = inputTypes[it].default;
-    if (t === "string") {
-      return true;
-    } else if (t === "directory") {
-      //TODO: ask if we should create the directory if it doesn't exist
-    } else if (t === "color") {
-      //TODO: look at: https://github.com/colorjs/color-name and https://github.com/regexhq/hex-color-regex
-      //for now, assume any string is a name or a hex value, but later check against real names and a regex
-      return true;
-    } else if (t === "choice") {
-      //TODO
-
+  // first, let's see if we're expecting a prompted anwer (e.g. create the directory?)
+  let na = config.context.needAnswer;
+  if (na != undefined) {
+    let answer = undefined;
+    if (na.type === "Y/N") {
+      let ans = line.toLowerCase;
+      if (ans === 'y' || ans === 'yes') {
+        answer = 'Y';
+      } else if (ans === 'n' || ans === 'no') {
+        answer = 'N';
+      }
+      // TODO: move this -- we're just seeing if this line is an answer, not responding to the answer!
+      if (answer === 'Y') {
+        if (na.forInput === "sourceDir") {
+          try {
+            fs.mkdirSync(na.directory);
+          } catch (e) {
+            console.log(`Error: could not create directory ${directory}`);
+          }
+        }
+      }
     }
-  } else {
-    return false;
-  }
-}
+    let it = config.context.inputType;
+    if (it === undefined) {
+      return false;
+    }
+    if (inputTypes[it] != undefined) {
+      let t = inputTypes[it].type;
+      let d = inputTypes[it].default;
+      if (t === "string") {
+        return true;
+      } else if (t === "directory") {
+        let directory = line
+        try {
+          fs.statSync(directory);
+        } catch (e) {
+          console.log(`directory ${directory} does not exist. Try to create it?`);
+          config.context.needAnswer = {
+            type: "Y/N",
+            forInput: it,
+            directory: line
+          }
+        }
+      } else if (t === "color") {
+        //TODO: look at: https://github.com/colorjs/color-name and https://github.com/regexhq/hex-color-regex
+        //for now, assume any string is a name or a hex value, but later check against real names and a regex
+        return true;
+      } else if (t === "choice") {
+        //TODO
 
-module.exports.help = cmdHelp;
-module.exports.setConfig = setConfig;
-module.exports.onLine = onLine;
+      }
+    } else {
+      return false;
+    }
+  }
+
+  module.exports.help = cmdHelp;
+  module.exports.setConfig = setConfig;
+  module.exports.onLine = onLine;
