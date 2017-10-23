@@ -15,7 +15,7 @@ const setConfig = function (rl) {
   config.readline = rl;
   config.context = {};
   config.context.vis = null;
-  config.context.expectingAnswer = false;
+  config.context.expectingOptionInput = false;
 };
 /*
  * Unlike a standard prompt->response model, we have to wait for
@@ -30,9 +30,22 @@ const onLine = function (line) {
   } else if (line === 'help' || line === '?') {
     console.log(cmdHelp);
     return;
-  } else if (config.context.expectingAnswer) {
+  } else if (config.context.expectingOptionInput) {
     if (isAnswer(line)) {
-      //TODO: update context
+      let na = config.context.needAnswer;
+      // expectingOptionInput means we're trying to fill out the options for a command
+      // needAnswer means we just prompted for a specific thing like "create a missing directory"
+      // while we're processing option input and we want something like a yes or no, or a color name,
+      // or a directory name, etc.
+      if (na != undefined && na.answer === 'Y') {
+        if (na.forInput === "sourceDir") {
+          try {
+            fs.mkdirSync(na.directory);
+          } catch (e) {
+            console.log(`Error: could not create directory ${directory}`);
+          }
+        }
+      }
     }
   }
   //TODO: if we're looking for specific answers, ask next question
@@ -74,65 +87,58 @@ const inputTypes = {
 }
 
 function isAnswer(line) {
-  if (!config.context.expectingAnswer) {
+  if (!config.context.expectingOptionInput) {
     return false;
   }
   // first, let's see if we're expecting a prompted anwer (e.g. create the directory?)
   let na = config.context.needAnswer;
   if (na != undefined) {
-    let answer = undefined;
     if (na.type === "Y/N") {
       let ans = line.toLowerCase;
       if (ans === 'y' || ans === 'yes') {
-        answer = 'Y';
+        na.answer = 'Y';
       } else if (ans === 'n' || ans === 'no') {
-        answer = 'N';
+        na.answer = 'N';
       }
-      // TODO: move this -- we're just seeing if this line is an answer, not responding to the answer!
-      if (answer === 'Y') {
-        if (na.forInput === "sourceDir") {
-          try {
-            fs.mkdirSync(na.directory);
-          } catch (e) {
-            console.log(`Error: could not create directory ${directory}`);
-          }
-        }
-      }
+      return true;
     }
-    let it = config.context.inputType;
-    if (it === undefined) {
-      return false;
-    }
-    if (inputTypes[it] != undefined) {
-      let t = inputTypes[it].type;
-      let d = inputTypes[it].default;
-      if (t === "string") {
-        return true;
-      } else if (t === "directory") {
-        let directory = line
-        try {
-          fs.statSync(directory);
-        } catch (e) {
-          console.log(`directory ${directory} does not exist. Try to create it?`);
-          config.context.needAnswer = {
-            type: "Y/N",
-            forInput: it,
-            directory: line
-          }
-        }
-      } else if (t === "color") {
-        //TODO: look at: https://github.com/colorjs/color-name and https://github.com/regexhq/hex-color-regex
-        //for now, assume any string is a name or a hex value, but later check against real names and a regex
-        return true;
-      } else if (t === "choice") {
-        //TODO
-
-      }
-    } else {
-      return false;
-    }
+    return false;
   }
+  let it = config.context.inputType;
+  if (it === undefined) {
+    return false;
+  }
+  if (inputTypes[it] != undefined) {
+    let t = inputTypes[it].type;
+    let d = inputTypes[it].default;
+    if (t === "string") {
+      return true;
+    } else if (t === "directory") {
+      let directory = line
+      try {
+        fs.statSync(directory);
+      } catch (e) {
+        console.log(`directory ${directory} does not exist. Try to create it?`);
+        config.context.needAnswer = {
+          type: "Y/N",
+          forInput: it,
+          directory: line,
+          answer: undefined
+        }
+      }
+    } else if (t === "color") {
+      //TODO: look at: https://github.com/colorjs/color-name and https://github.com/regexhq/hex-color-regex
+      //for now, assume any string is a name or a hex value, but later check against real names and a regex
+      return true;
+    } else if (t === "choice") {
+      //TODO
 
-  module.exports.help = cmdHelp;
-  module.exports.setConfig = setConfig;
-  module.exports.onLine = onLine;
+    }
+  } else {
+    return false;
+  }
+}
+
+module.exports.help = cmdHelp;
+module.exports.setConfig = setConfig;
+module.exports.onLine = onLine;
