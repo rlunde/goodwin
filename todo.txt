@@ -66,7 +66,7 @@ a few JS includes from a CDN will pull in their framework/libraries, and then
 you can make your "hello world" example in a handful of lines.
 
 I want to have a code generator that goes beyond hello world, but stays with
-something that will actually run in a browser but it editable by hand. I want
+something that will actually run in a browser but be editable by hand. I want
 an assistant, that can help re-generate portions of code, or refactor code, or
 explain code, not a thing that just poops out something that's too big to 
 understand in a dev environment that makes stuff that's too munged up to
@@ -88,3 +88,16 @@ term, I think it makes the most sense to stick with JavaScript and Go, since
 getting something working that other people can (eventually) contribute to is
 more important than using a "fun" functional language like that.
 
+This is an example todo stack as I imagine it might be represented in funtodone (see
+that project) for goodwin.
+
+4: make an example JSON format D3 sample project description
+4: include description in every JSON element (since we can't have comments)
+3: make a command line chat program that just creates a skeleton JSON format description
+3: make a directory for D3 project sample descriptions (and brainstorm persistence requirements for MVP)
+3: make a command line chat that collects info for a D3 sample and outputs JSON description
+3: make a D3 code generator that takes a JSON description and produces a D3 example
+2: get a D3 conversational code generator working for a limited subset of D3
+1: make a first example of client, server, and working demo
+1: define what features are critical (vision, docs, code, examples, websites)
+0: create a MVP release of goodwin

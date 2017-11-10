@@ -1,3 +1,6 @@
+Before November 2017:
+==================================================================
+
 I evaluated using python or ruby to do the CLI version, but
 since I want to eventually have an electron-based client, it
 made sense to stick with node.
@@ -12,4 +15,22 @@ If I move on to a node environment with automatic babel compilation
 (which seems like a good thing to try), I might start here:
 
 https://github.com/babel/example-node-server
+
+
+==================================================================
+November 9, 2017:
+==================================================================
+I had fun working on the node CLI for Goodwin, but discovered
+something interesting: a chat interface is a good way to do some
+things, but not a good way to do *everything*. Basically, once
+you want the user to do something very specific, such as pick
+an item from a list, fill in values needed to generate code, etc.,
+they're better off interacting with a form.
+
+Even the chat interface is probably best done in a way that resembles
+what you see in slack or hipchat. My current idea is to have the
+chat input at the bottom, and use the right hand side to collect 
+info using dynamic form elements.
+
+I'll start by trying to lay out something like that.
 
