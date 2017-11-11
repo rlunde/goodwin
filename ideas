@@ -32,4 +32,11 @@ CLI command, and then turn it into electron/node later.
 
 https://developer.atlassian.com/blog/2015/11/scripting-with-node/
 
+-------------
+
+That was fun, but ultimately a dead end from a UI/UX perspective. See the
+notes file for details.
+
+
+
 
