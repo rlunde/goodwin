@@ -7,10 +7,10 @@ client infrastructure: docker? vagrant? virtualbox?
 My idea is to let the client have full filesystem access, and be
 more or less controlled from the server which may be constantly
 updated based on work of many people, so the safe way to run
-it is inside a VM of some sort. Of course, then you'd have to 
-copy the stuff you want from the VM to your native computer, and
+the client is inside a VM of some sort. Of course, then you'd have to 
+copy the generated code (etc.) from the VM to your native computer, and
 you'd have to trust the stuff you copy, so I will probably just
-tell people to use a VM, but guess that most people aren't going
+tell people to use a VM, but guess that many people aren't going
 to bother.
 
 
