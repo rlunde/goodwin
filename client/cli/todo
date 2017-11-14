@@ -1,5 +1,12 @@
 
-[x] write pseudocode for an initial pass at collecting data and generating code
+[ ] time to give up on this whole "cli" idea, and move back to electron
+  [ ] see ../../notes
+  [ ] I need a UI with a chat control and a dynamic form to collect info needed to answer a specific question
+  [ ] move the stuff from here up a level (e.g. the d3 related stuff)
+
+
+Former contents of this todo file:
+
 [ ] take another step back? Use of a generator function with "yield" for input processing is over-complicated
   [ ] just do an async event loop with on('line') -- no generator function
   [ ] keep the current state as a hash, not a stack
