@@ -34,3 +34,12 @@ info using dynamic form elements.
 
 I'll start by trying to lay out something like that.
 
+
+==================================================================
+November 14, 2017:
+==================================================================
+I spent a couple of days on sideauth (just to avoid forgetting what
+I was doing there). Now I want to:
+a) move the files from under cli client (giving up on a separate CLI)
+b) make an outline of the basic electron app layout
+
