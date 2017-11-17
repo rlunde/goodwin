@@ -1,0 +1,11 @@
+Friday, November 17, 2017
+-----------------
+
+I'd like to try to do a little test-first development on this project,
+but I'm not sure how to begin. I think maybe I should have two top
+levels -- one a regular web app, and one an electron app. The regular 
+web app could use node/express, perhaps.
+
+I think that might just double the effort and magnify the complexity
+though. I'll start by looking at spectron:
+https://github.com/electron/spectron

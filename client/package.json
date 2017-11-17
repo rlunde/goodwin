@@ -4,7 +4,8 @@
   "description": "A minimal goodwin client based on electron",
   "main": "main.js",
   "scripts": {
-    "start": "electron main.js"
+    "start": "electron main.js",
+    "test":"mocha"
   },
   "repository": {
     "type": "git",
@@ -23,6 +24,8 @@
   },
   "homepage": "https://github.com/rlunde/goodwin#readme",
   "devDependencies": {
-    "electron": "~1.7.8"
+    "electron": "~1.7.8",
+    "mocha": "^4.0.1",
+    "spectron": "^3.7.2"
   }
 }
