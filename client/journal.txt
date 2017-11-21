@@ -9,3 +9,22 @@ web app could use node/express, perhaps.
 I think that might just double the effort and magnify the complexity
 though. I'll start by looking at spectron:
 https://github.com/electron/spectron
+
+Sunday, November 19, 2017
+------------------
+
+I'm trying to get a simple layout working. I think I'm stuck in my same
+old rut, trying to get two divs to line up next to each other, each of
+which takes up a fixed percentage of the containing box. 
+
+TODO: add "simple" CSS code generation to what goodwin generates!
+
+Monday, November 20, 2017
+------------------
+
+Finally got the two divs to line up side by side. Honestly! Why on
+earth is that so hard? Most of the stupid StackOverflow questions I found
+on it were "closed as duplicates", and most of the remaining ones were wrong.
+I think the people who "close as duplicates" without saying duplicates
+of *what* are ... well, "jerks" is about the most polite term I can think of.
+
