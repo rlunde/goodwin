@@ -15,6 +15,11 @@ body {
 .chatinterface,
 .forminterface {
   width: 50%;
+  float: left;
+  border: 1px solid white;
+}
+.main {
+  margin: 0 auto;
 }
 .outputtext {
   padding-left: 20px;
@@ -24,9 +29,8 @@ body {
 }
 .forminterface {
   border-width: 1px;
-  border-color: black;
-  padding: 5px;
-  float: left;
+  border-color:black;
+  padding-left: 5px;
 }
 /* sticky footer */
 .footer {
