@@ -28,3 +28,12 @@ on it were "closed as duplicates", and most of the remaining ones were wrong.
 I think the people who "close as duplicates" without saying duplicates
 of *what* are ... well, "jerks" is about the most polite term I can think of.
 
+Tuesday, November 21, 2017
+------------------
+
+There's at least one very annoying layout issue remaining, which is that the
+inputtext box for the chat interface sticks out into the form div. 
+
+OK, figured that out (needed to add bootstrap classes to the divs and the
+textarea), but there are still a few layout things to figure out. I'll add them
+to a todo file.
