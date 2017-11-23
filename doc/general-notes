@@ -34,11 +34,6 @@ To install those yourself:
   npm install jquery
   npm install bootstrap
 
-I think the next thing to do with this project is to pick something tiny and fun
-to do a code generation snippet for. Prompt the user, and say "sorry, so far all
-I know how to do is make fun CSS animations for existing HTML or SVG elements".
-Then learn how to parse input, have a Q&A session with the user, etc.
-
 I think the most important thing to get going right from the start, and keep
 working on, is a wise-ass attitude like Archie Goodwin has in the Nero Wolfe
 books. Not everyone will enjoy that, of course, but it's a way to make something
@@ -55,10 +50,6 @@ Or maybe there's a tutorial for a chat client that does that?
 
 After poking around for a while, I found a list of chat templates for bootstrap,
 here: http://www.designrazor.net/best-free-bootstrap-chat-templates/
-
-I guess I should be better about splitting up the notes about the whole project
-into this file, and things specific to the client or the server under their
-own directories in devlog.me or notes.
 
 Actually, in addition to helping people figure out how to use git (by having
 a conversation -- which could just be Q&A at first) I'll bet there are a handful
@@ -83,7 +74,7 @@ a way that is most likely to solicit a useful answer on stackoverflow or other
 sites. Many questions are too vague or are so poorly written that they're
 unlikely to interest the right people.
 
-See server/notes for my initial decision about how to split things between
+See server.notes.txt for my initial decision about how to split things between
 client and server. In a nutshell:
 
 Client:
@@ -103,10 +94,10 @@ Start with code generation/re-generation for D3, because D3 is super cool,
 but a lot of it isn't very intuitive (e.g. select for things that don't exist
 yet).
 
-I registered the domain gend3.com for that, and pointed it at a ubuntu server
-in the cloud. I want to read/write a JSON representation of a sample D3
-app from goodwin, and have the server be able to generate a sample web site
-(with html, css, and js) from that, to download as a tarball.
+I want to read/write a JSON representation of a sample D3
+app from goodwin, and be able to generate a sample web site
+(with html, css, and js) from that. Should let the user choose
+how complete of an example to make?
 
 I want to come up with a set of (rarely used) witticisms for Goodwin to
 say -- not sarcastic, like "you thought of that all by yourself?" but
