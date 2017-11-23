@@ -99,3 +99,18 @@ directory, and just doing minor editing and writing a todo list for it. Then
 I'll brainstorm a list of other documentation I need. I guess I should move
 all my todo files and this journal under doc as well, so I don't have to hunt
 all over the place for it.
+
+==================================================================
+Thursday, November 23, 2017
+==================================================================
+
+Today's task is "goodwin/design". I can take that to mean either
+layout/UI/UX, or code design, or both.
+
+I want to try making the client with React, so I'll start by thinking
+about:
+1) what should the chat dialog look like?
+2) how should chat interaction work?
+3) how should form interaction work?
+
+See chat-notes.txt and form-notes.txt for starts at those
