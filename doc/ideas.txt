@@ -1,9 +1,12 @@
 Here are some ideas for very simple code generation starter projects:
 a) generate a very simple web page based on asking a series of questions
 b) generate a D3 chart or graph based on conversation
-c) generate a model based on conversation, and code to/from JSON serialization and a database schema in SQL or NoSQL
-d) take a sample of JSON (or yaml) as input, ask questions about each part, and generate a model (etc) as above
-e) have a conversation about a simple problem, and choose a sample example that's similar to what you might do
+c) generate a model based on conversation, and code to/from JSON 
+   serialization and a database schema in SQL or NoSQL
+d) take a sample of JSON (or yaml) as input, ask questions about each part, 
+   and generate a model (etc) as above
+e) have a conversation about a simple problem, and choose a sample example 
+   that's similar to what you might do
 f) generate an iphone / android app based on asking some questions
 
 I think the most fun first thing to do will be D3. Especially since
@@ -24,19 +27,4 @@ Part of asking questions should be (eventually at least) what language and (mayb
 frameworks they are working in, or want to work in, so it can generate at least
 a stub project for a client/server app with a service and database in the
 desired language and a client in the appropriate framework (e.g. react, or vue).
-
--------------
-This looks like a fun starting point for using node from the command
-line. I figure I might be able to get some of the basics written as a simple
-CLI command, and then turn it into electron/node later.
-
-https://developer.atlassian.com/blog/2015/11/scripting-with-node/
-
--------------
-
-That was fun, but ultimately a dead end from a UI/UX perspective. See the
-notes file for details.
-
-
-
 

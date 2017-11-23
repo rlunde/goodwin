@@ -1,3 +1,6 @@
+======================================
+Background
+======================================
 
 I tried to think of a good sidekick from literature or film that
 reminded me of what I wanted for this, and came up with Archie
@@ -16,25 +19,27 @@ get more specifics and the models, APIs, etc., before generating
 the first code, and would leave markers in the code (as comments)
 to guide later parsing and automated changes.
 
-To Do Next:
+General Guidelines
 
-[ ] think through an initial design
-[ ] make the simplest possible thing just to get started
-  [ ] start off with tiny little code generators
-  [ ] make a module that asks questions and fills in a config struct
-  [ ] save and load config
-  [ ] just make it command line based -- forget the javascript / electron stuff at first
-  [ ] brainstorm a list of simple code generators and pick those that are original and fun
-[ ] try to make it fun, and funny -- make it a wiseass like Archie Goodwin in the books
-[ ] make a list of all the most popular code generators (e.g. in Rails), and see how
-    they work. Look for things that can parse and ge-generate portions of code.
-[ ] decide on an architecture -- I think I could get hung up worrying about deployment issues,
-    but since (initially at least) this is for developers, the client piece should be transparent,
-    and anything destructive should be very carefully done and verified.
-[ ] I'm thinking of a client/server architecture, with the server written for speed, simplicity,
-    and efficiency, and the client written for simplicity and transparency.
+1) make the simplest possible thing just to get started
+  a) start off with tiny little code generators
+  b) make a module that asks questions and fills in a config struct
+  c) save and load config
+  d) brainstorm a list of simple code generators and pick those that are 
+     original and fun
+2) try to make it fun, and funny -- make it a wiseass like 
+   Archie Goodwin in the books
+3) make a list of all the most popular code generators (e.g. in Rails), and see how
+   they work. Look for things that can parse and ge-generate portions of code.
+4) decide on an architecture -- I think I could get hung up worrying about 
+   deployment issues, but since (initially at least) this is for developers, 
+   the client piece should be transparent, and anything destructive should be 
+   very carefully done and verified.
+5) I'm thinking of a client/server architecture, with the server written for 
+   speed, simplicity, and efficiency, and the client written for simplicity 
+   and transparency.
 
-In addition to code generation, there's just helping figure out how to
+In addition to code generation, I'd like if it just helped people figure out how to
 use tools. Git is a great place to start. There are a whole lot of options
 to git and different ways of using it, and most of the confusion could
 probably be cleared up by asking a few questions.
@@ -44,7 +49,7 @@ may want to know what a closure is, and when to use one, or may want syntax
 help just making an anonymous function, or may want a confusing bit of code
 explained.
 
-I think the first thing will be a handful:
+I think this first thing will be a handful:
 a) make a json format to describe a project to be code generated
 b) make a code generator
 c) make the code generator take the json format
@@ -65,39 +70,54 @@ Meanwhile, the tutorial sites for react, angular, etc. all want to show you how
 a few JS includes from a CDN will pull in their framework/libraries, and then
 you can make your "hello world" example in a handful of lines.
 
-I want to have a code generator that goes beyond hello world, but stays with
+I want to have a code generator that goes beyond hello world, but generates
 something that will actually run in a browser but be editable by hand. I want
 an assistant, that can help re-generate portions of code, or refactor code, or
 explain code, not a thing that just poops out something that's too big to 
 understand in a dev environment that makes stuff that's too munged up to
 understand in the browser.
 
+I don't want to stop people from using the output in a big project with 87
+million bells and whistles, I just don't want to require it.
+
 So what's the first step towards that?
 
-a) begin with the end in mind -- write up more about how I want this to work
-b) make a command-line chat interface that collects info needed to make a *simple* project
+Start by writing up a high level architecture / design.
 
 Also, I have a few other sample projects that I'm doing just to learn things -- this
 is a perfect opportunity to take a step back and make this project be the thing
 that generates (some of) the code for those. That way I have some very simple
 real world examples to work with and still make progress on those other things.
-
-I'd said that I was thinking of using clojure for part of this, but have changed
-my mind -- I'd like to have clojure be a target, but only eventually. In the short
-term, I think it makes the most sense to stick with JavaScript and Go, since
-getting something working that other people can (eventually) contribute to is
-more important than using a "fun" functional language like that.
+Maybe.
 
 This is an example todo stack as I imagine it might be represented in funtodone (see
 that project) for goodwin.
 
-4: make an example JSON format D3 sample project description
-4: include description in every JSON element (since we can't have comments)
-3: make a command line chat program that just creates a skeleton JSON format description
-3: make a directory for D3 project sample descriptions (and brainstorm persistence requirements for MVP)
-3: make a command line chat that collects info for a D3 sample and outputs JSON description
-3: make a D3 code generator that takes a JSON description and produces a D3 example
-2: get a D3 conversational code generator working for a limited subset of D3
-1: make a first example of client, server, and working demo
-1: define what features are critical (vision, docs, code, examples, websites)
+Overall ToDo:
+
 0: create a MVP release of goodwin
+1: define what features are critical (vision, docs, code, examples, websites)
+1: make a first example of client, server, and working demo
+2: get a D3 conversational code generator working for a limited subset of D3
+3: make a D3 code generator that takes a JSON description and produces a D3 example
+3: make a simple node client that just 
+  a: makes a directory for D3 project sample descriptions
+  b: collects info for a D3 sample and outputs JSON description
+4: include description in every JSON element (since we can't have comments)
+4: make an example JSON format D3 sample project description
+
+Client ToDo:
+
+  Layout:
+
+  [ ] default to a larger window (if can do without extending beyond screen)
+  [ ] put input box on the bottom of the chatinterface
+  [ ] make chatinterface and forminterface take up 100% height of 
+      enclosing div (use flexbox)
+
+  Interaction:
+
+  [ ] do some reading -- see if I can use react inside electron?
+    [ ] start here: https://medium.com/@Agro/developing-desktop-applications-with-electron-and-react-40d117d97564
+
+
