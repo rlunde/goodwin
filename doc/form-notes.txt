@@ -1,0 +1,12 @@
+Form Notes
+----------------------------
+
+* remember input for each field of each form across invocations
+* try to pre-fill text boxes with sensible defaults whenever possible
+* show errors near the field that caused it, or at the top of the form
+  if that's hard to figure out. For example, if can't create a directory,
+  put the error below the text input for the directory name.
+* use a style from a configuration file (colors, fonts, etc.)
+* make it easy to report bugs or ideas
+* don't overwrite files without confirmation
+* (eventually) try to edit files rather than replacing them
