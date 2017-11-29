@@ -120,4 +120,13 @@ Client ToDo:
   [ ] do some reading -- see if I can use react inside electron?
     [ ] start here: https://medium.com/@Agro/developing-desktop-applications-with-electron-and-react-40d117d97564
 
+  If I use react, I'll also need to use react-bootstrap I assume:
+    [ ] https://react-bootstrap.github.io/components.html#page-layout
+
+  There's an explanation here for why you need react-bootstrap (it's just
+  for the javascript/DOM interactions, not the CSS):
+  https://stackoverflow.com/questions/38015494/can-we-use-pure-bootstrap-with-react-js
+
+  
+
 
