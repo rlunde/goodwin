@@ -131,3 +131,40 @@ https://react-bootstrap.github.io/components.html#page-layout
 There's an explanation here for why you need react-bootstrap (it's just
 for the javascript/DOM interactions, not the CSS):
 https://stackoverflow.com/questions/38015494/can-we-use-pure-bootstrap-with-react-js
+
+==================================================================
+Friday, December 1, 2017
+==================================================================
+
+Today's task is testing. Last time I looked at it I installed spectron
+and mocha, and got a first test running (npm test) that just checks to
+make sure the application launches.
+
+For individual unit tests, I should be able to just use mocha directly,
+I'd guess, without the spectron stuff to launch an application. Of course,
+I don't really have anything to test yet.
+
+Also, if I really do integrate react with electron (which makes sense
+to try, at least), then I'd probably be better off using jest than mocha.
+
+Hmm, after spending an hour or so poking around, it seems there are
+some big challenges with using jest with spectron/electron and react.
+I may be asking for trouble.
+
+I think what I'll do is try using mocha with enzyme to test react,
+and see if that works from inside spectron. If I get in trouble,
+I think the first thing to do is just abandon react for this project,
+and try to stick to a more conventional approach to making and
+testing electron apps.
+
+See:
+https://github.com/airbnb/enzyme
+https://medium.com/@kayodeniyi/setting-up-tests-for-react-using-mocha-expect-and-enzyme-8f53af96fe7e
+https://github.com/electron/spectron
+https://medium.com/@Agro/developing-desktop-applications-with-electron-and-react-40d117d97564
+
+I tried starting with:
+npm install --save-dev mocha expect enzyme jsdom react-addons-test-utils
+
+I also installed react, react-dom, react-bootstrap
+
