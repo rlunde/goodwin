@@ -168,3 +168,17 @@ npm install --save-dev mocha expect enzyme jsdom react-addons-test-utils
 
 I also installed react, react-dom, react-bootstrap
 
+==================================================================
+Thursday, December 7, 2017
+==================================================================
+
+Today's task is documentation.
+
+One thing in the back of my mind for some time now is that I should write the
+plan for goodwin in the form of a story. Probably, I'd want to start off with
+a person using it to get something minimal done, and then have a new chapter
+with a slightly smarter and more helpful app each time, until eventually the
+app is indistinguishable from an actual human assistant (in terms of what it says).
+
+Of course, that wouldn't be a very exciting story. I'll need some conflict
+and suspense and danger. I'm going to try to make an outline.
