@@ -182,3 +182,22 @@ app is indistinguishable from an actual human assistant (in terms of what it say
 
 Of course, that wouldn't be a very exciting story. I'll need some conflict
 and suspense and danger. I'm going to try to make an outline.
+
+==================================================================
+Friday, December 8, 2017
+==================================================================
+
+Today's task is to simplify goodwin.
+
+I think all those links I found before are basically obsolete by
+now. If I seriously want to do an electron app with react and redux (and
+it still seems to me that I should at least give it a try) then I
+should restart from this boilerplate:
+
+https://github.com/chentsulin/electron-react-boilerplate
+
+So first move all the code out of the way, then follow the
+directions there. If I can't get it working, delete all that, 
+and start over with this code, and just get rid of react/redux.
+
+Here goes nothing...

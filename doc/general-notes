@@ -103,3 +103,12 @@ I want to come up with a set of (rarely used) witticisms for Goodwin to
 say -- not sarcastic, like "you thought of that all by yourself?" but
 things that could be taken two ways, or backhanded compliments.
 
+I found some more blogs that may be useful:
+https://hackernoon.com/how-to-add-a-gui-to-your-golang-app-in-5-easy-steps-c25c99d4d8e0 (using electron)
+https://medium.freecodecamp.org/heres-how-i-created-a-markdown-app-with-electron-and-react-1e902f8601ca
+https://medium.freecodecamp.org/how-to-build-a-chat-application-using-react-redux-redux-saga-and-web-sockets-47423e4bc21a
+https://github.com/ReactPrimer/ReactPrimer/?utm_source=DigitalOcean_Newsletter
+https://github.com/laurent22/joplin?utm_source=DigitalOcean_Newsletter
+
+Actually, let's start with the boilerplate:
+https://github.com/chentsulin/electron-react-boilerplate
