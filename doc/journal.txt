@@ -201,3 +201,76 @@ directions there. If I can't get it working, delete all that,
 and start over with this code, and just get rid of react/redux.
 
 Here goes nothing...
+
+It mostly worked. I get this error from "npm run dev" after everything
+is installed:
+
+errno: -13,
+  code: 'EACCES',
+  syscall: 'open',
+  path: '/Users/ron/Library/Application Support/Electron/extensions/fmkadmapgofadopljbjfkapdkoienihi/build/inject.js' }
+Failed to read content scripts { Error: EACCES: permission denied, open '/Users/ron/Library/Application Support/Electron/extensions/fmkadmapgofadopljbjfkapdkoienihi/build/inject.js'
+    at Object.fs.openSync (fs.js:584:18)
+    at Object.module.(anonymous function) [as openSync] (ELECTRON_ASAR.js:173:20)
+    at Object.fs.readFileSync (fs.js:491:33)
+    ...
+
+I don't know why it put Electron under my Application Support folder, but the "build" directory under that weird
+path had 644 rather than 755 permissions.
+
+After changing those permissions, I still get this warning:
+
+> electron-react-boilerplate@0.12.0 start-main-dev /Users/ron/Projects/goodwin/client
+> cross-env HOT=1 NODE_ENV=development electron -r babel-register ./app/main.dev
+
+(node:54719) DeprecationWarning: Chunk.modules is deprecated. Use Chunk.getNumberOfModules/mapModules/forEachModule/containsModule instead.
+    at /Users/ron/Projects/goodwin/client/node_modules/extract-text-webpack-plugin/index.js:271:24
+    at /Users/ron/Projects/goodwin/client/node_modules/async/dist/async.js:3060:16
+    at eachOfArrayLike (/Users/ron/Projects/goodwin/client/node_modules/async/dist/async.js:1003:9)
+    at eachOf (/Users/ron/Projects/goodwin/client/node_modules/async/dist/async.js:1051:5)
+    at Object.eachLimit (/Users/ron/Projects/goodwin/client/node_modules/async/dist/async.js:3122:5)
+    at ExtractTextPlugin.<anonymous> (/Users/ron/Projects/goodwin/client/node_modules/extract-text-webpack-plugin/index.js:268:10)
+    at Compilation.applyPluginsAsyncSeries (/Users/ron/Projects/goodwin/client/node_modules/tapable/lib/Tapable.js:206:13)
+    at Compilation.seal (/Users/ron/Projects/goodwin/client/node_modules/webpack/lib/Compilation.js:596:8)
+    at applyPluginsParallel.err (/Users/ron/Projects/goodwin/client/node_modules/webpack/lib/Compiler.js:508:17)
+    at /Users/ron/Projects/goodwin/client/node_modules/tapable/lib/Tapable.js:289:11
+
+From poking around it looks like this issue may have been fixed in a later webpack -- I tried putting 3.4.1 
+in package.json instead of 3.0.0. The specific warning during yarn install may be:
+
+warning "extract-text-webpack-plugin@2.1.2" has incorrect peer dependency "webpack@^2.2.0".
+
+The latest extract-text-webpack-plugin is 3.0.2, so I'm trying that again, then trying yarn install again...
+
+That seems to have fixed that error.
+
+
+==================================================================
+Saturday, December 9, 2017
+==================================================================
+
+Today's task is to simplify goodwin, just like yesterdays. Wow -- the universe must
+really want me to simplify this! Yesterday, I just grabbed a new starting boilerplate
+and fixed a couple of errors related to technical debt / decay of the boilerplate,
+but didn't actually do anything on goodwin itself.
+
+I especially didn't simplify it.
+
+Today I just want to write down what I'm thinking about simplifying the architecture of
+goodwin.
+
+1) Use Docker
+2) Server will be written in Go, use a docker bind mount to pass configuration data beyond ports
+   (if any is needed), and use a volume to store the database which will persist session data and
+   chat history per user.
+3) Client will be written in electron/react/redux boilerplate, use a docker bind mount to pass
+   in local configuration data (such as server info), use REST and/or websockets to communicate
+   with the server, and use a docker volume (probably?) as the destination of generated source
+   code or the code being updated/edited by goodwin.
+
+This "should" let me easily deploy server and client, should protect the client's user
+from malicious changes caused by rapid server development / insufficient safeguards, and
+hopefully will be easy enough to use so that client users can copy generated source code
+into their own git repos (etc.).
+
+Now all I have to do is write it!
