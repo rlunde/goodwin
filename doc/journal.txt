@@ -274,3 +274,45 @@ hopefully will be easy enough to use so that client users can copy generated sou
 into their own git repos (etc.).
 
 Now all I have to do is write it!
+
+==================================================================
+Monday, December 11, 2017
+==================================================================
+
+Today's task is design for goodwin.
+
+I can take that many different ways. Design as in UI/UX, design as
+in code, design as in database, etc. I think I've got a reasonably
+good idea of what I want the UI/UX to be:
+
+Electron-based App with:
+1) a header nav bar (pinned to top of window)
+2) a content area
+3) a footer (pinned to bottom of window)
+
+The navbar will be where all the menu stuff happens.
+
+When the client starts up and the user signs in, the content area
+will just have the chat interface. When the chat interface detects
+something that needs form input (e.g. filling in the options for
+code generation) it will slide in a panel on the right hand side,
+and reformat the chat history on the left. I'm thinking it will be
+an actual panel, not a modal, but we'll see.
+
+The forms for filling in options should have default values and 
+should remember user input across invocations. The user should be 
+able to cancel the form at any time.
+
+The chat interface should still work while the form is up. If there
+is an action (like generate code) that the user can expect to do 
+after filling in a form, the files that result should be downloadable 
+as a zip, or we should just open the directory in whatever OS file
+browser/finder we have. Could also launch a configured IDE or bash
+shell to that directory?
+
+Later, when goodwin does more thna just generate code, but actually
+helps edit existing code, we'll have to figure out how to make
+a smart plugin that talks to the goodwin server from the editor.
+
+
+
