@@ -315,4 +315,37 @@ helps edit existing code, we'll have to figure out how to make
 a smart plugin that talks to the goodwin server from the editor.
 
 
+==================================================================
+Tuesday, December 12, 2017
+==================================================================
+
+Well, my attempt to start over with this utterly failed:
+https://github.com/chentsulin/electron-react-boilerplate
+
+Too many reasons to list here, but it's another example of kitchen
+sink programming. I spent *hours* trying to fix software rot that
+caused spurious errors in vscode, and never succeeded entirely.
+Most of the ones I couldn't figure out how to fix were due to the
+use of Flow for static type checking, but basically, I want to work
+on a small app to start with, not a giant app that doesn't work that
+I want to fill in my small app stuff.
+
+So I'm back to my old client. I still don't know whether it's really
+worth it to add in react or not. The base electron doesn't use it,
+and it complicates the hell out of testing, etc. I'll give it a few
+more days before I bail on that.
+
+The good news is, I learned some stuff! One thing I learned, is
+that when Visual Studio code loses it's mind and gives errors even 
+across restarts, you can cure it by just deleting the ~/.vscode 
+directory.
+
+Also, I found another interesting looking article on medium, that
+has been pondering again whether electron is really necessary for
+goodwin, at least at this stage.
+
+https://medium.com/@francesco.agnoletto/i-didnt-like-create-react-app-so-i-created-my-own-boilerplate-190a7dd5d74
+
+It's not talking about electron, just about not hiding all the magic 
+configuration stuff the way create-react-app does.
 
