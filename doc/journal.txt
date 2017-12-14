@@ -349,3 +349,44 @@ https://medium.com/@francesco.agnoletto/i-didnt-like-create-react-app-so-i-creat
 It's not talking about electron, just about not hiding all the magic 
 configuration stuff the way create-react-app does.
 
+
+==================================================================
+Wednesday, December 13, 2017
+==================================================================
+
+Today's task is to simplify goodwin.
+
+I've been thinking about what happened with the electron react boilerplate,
+and have come to the conclusion that my next experiment will be to start with
+the link above, and just turn goodwin into a two docker containers. One
+container will be a regular web app -- probably just the client web app in 
+react/redux and a lightweight web server that can read/write source code in
+the docker volume -- and the other will be an app server written in go.
+I'll just call from one container to the other. 
+
+So 3 system components, with the following responsibilities:
+
+client:
+  * UI and UX
+web server:
+  * read/write local files
+  * notice file changes (so you can edit in IDE of choice)
+  * interact with app server
+  * interact with client
+app server:
+  * do the business logic (initially just code generation)
+
+Since both containers could be run locally, there's no need (yet)
+to do any account creation, auth, login, password management, etc.
+Even in the longer term, web server<->app server credentials might
+be best done via an API key rather than an account.
+
+The web server could be in node/express, but I think I'll start 
+off at least writing both web services in go.
+
+I do want the SPA web page to be responsive, so you could run
+the containers anywhere and run the web app on a tablet in a pinch,
+since code generation won't be the only thing goodwin does (after all,
+the chat interface is the most important part), but there's no 
+reason it has to be an electron client -- or anything other than
+a web app.
