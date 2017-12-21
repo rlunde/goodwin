@@ -390,3 +390,47 @@ since code generation won't be the only thing goodwin does (after all,
 the chat interface is the most important part), but there's no 
 reason it has to be an electron client -- or anything other than
 a web app.
+
+==================================================================
+Wednesday, December 20, 2017
+==================================================================
+
+I added the example Jest test on the 15th. Today I want to just
+plan out some next steps for doing this TDD.
+
+TDD Next Steps:
+  simpleclient:
+    [ ] main page should have a nav bar
+    [ ] main page should have a footer
+    [ ] main page should have a chat panel
+  web server:
+    [ ] health check api should work
+    [ ] version API should work
+    [ ] chat APIs should work
+    [ ] template/form APIs should work
+  app server:
+    [ ] health check api should work
+    [ ] version API should work
+    [ ] chat APIs should work
+    [ ] command APIs should work
+
+  Now I have to figure out what some of those actually mean.
+  I assume that the web api is just there to interact with the
+  client, providing help for presentation and a (mostly) pass-through
+  interface to the app server.
+
+  Information needed to fill in a command might be sent back to
+  the web service from the app service, which could then turn that
+  into regular (non-React) forms. Or (better) let the React javascript
+  dynamically build forms based on API response.
+
+  That means that the client can't be super dynamic, unless the
+  web API is filling in templates that come from the app server.
+  I think that's complicated enough that there's no reason to start
+  off with it, but I just have to remember that in the long term,
+  that's the direction I want to go. So the Web service should download 
+  the latest JSX files from the app server on startup, and build them?
+  Hmm. Better not. Better keep the templates just data, and make the
+  React code smart enough to build up whatever form is needed from
+  a JSON description.
+  
