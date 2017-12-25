@@ -13,7 +13,7 @@ import { AppContainer } from 'react-hot-loader';
 
 import App from './App';
 
-import './style.scss';
+import './goodwin.css';
 
 const root = document.getElementById('root');
 
