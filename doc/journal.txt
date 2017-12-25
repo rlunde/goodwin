@@ -434,3 +434,27 @@ TDD Next Steps:
   React code smart enough to build up whatever form is needed from
   a JSON description.
   
+
+==================================================================
+Sunday, December 24, 2017
+==================================================================
+
+'twas the night before Christmas...
+
+My goal for this week is to get as much of the basic UI working
+as I can. I'll start off with a basic CSS layout, probably based
+on either flexbox or grid. If I use grid, I probably don't need to
+use react-bootstrap as much (or maybe at all).
+
+Here's the order to do UI stuff:
+
+[x] get the overall page structure working
+[ ] get the form interface working as a modal
+[ ] get the chat interface working
+
+After that, I want to work out packaging and running with Docker,
+with a volume mounted that I can write out source code to, and a 
+file of configuration options.
+
+Then I'll work on getting D3 bar chart generation working, as I 
+started to do in the CLI interface.
