@@ -458,3 +458,47 @@ file of configuration options.
 
 Then I'll work on getting D3 bar chart generation working, as I 
 started to do in the CLI interface.
+
+==================================================================
+Tuesday, December 26, 2017
+==================================================================
+
+I think this is "boxing day" in some parts of the world. Probably 
+(just guessing) that isn't "casting primitive types into objects" day.
+
+I realized that the order of the next pieces should really be:
+
+[ ] get the chat interface working
+[ ] get the form interface working as a modal
+
+...since the chat interface should cause the form interface to display
+when needed. That is, when you say you want to generate a sample D3
+bar chart, it should bring up the form to let you fill in parameters.
+
+The chat interface should have the text input area at the bottom, and 
+however many previous things (from history) there are should stack 
+above it, left justified and yellow for user input, and right justified 
+and blue for goodwin. All colors should be configurable eventually,
+but I doubt I need to obsess about that now.
+
+Each of the chat boxes should have a tiny timestamp, and it should
+start up with the previous screenful. At the very top there should be
+a gadget to let you get more history (if available) or to search
+history (eventually). You should also be able to delete things from
+the history, since this is just a conversation with goodwin, not
+between two people.
+
+So:
+  <div class="chatHistory">
+    <div class="chatHistoryItem">text</div>
+  </div>
+  <div class="chatInput"></div>
+
+I think chatInput should be a wrapper around a styled inputText box,
+if possible, rather than turning a custom control into an inputText box.
+I've read that accessibility and stuff tend to always get done wrong if
+you try to roll your own. I guess the first thing I'll do is look for
+some examples.
+
+This looks like a good starting place:
+https://codepen.io/thatdevguy/pen/HbKCf
