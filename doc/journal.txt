@@ -502,3 +502,11 @@ some examples.
 
 This looks like a good starting place:
 https://codepen.io/thatdevguy/pen/HbKCf
+
+==================================================================
+Friday, December 29, 2017
+==================================================================
+
+Tonight I started looking at React router. Nothing accomplished
+beyond some research.
+
