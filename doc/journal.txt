@@ -510,3 +510,19 @@ Friday, December 29, 2017
 Tonight I started looking at React router. Nothing accomplished
 beyond some research.
 
+==================================================================
+Sunday, December 31, 2017
+==================================================================
+
+The hard part about doing a project (or multiple projects, if you're
+a goofball like I am) is not getting hung up on layout while still 
+making it look good enough to avoid turning people off the instant
+they see it.
+
+I think the layout is OK for now (not counting authentication, since 
+I can postpone that for a long time, given the docker strategy). Not 
+that I don't need to make it a lot nicer, but I can do that as part 
+of getting a "spike" of functionality done.
+
+
+
