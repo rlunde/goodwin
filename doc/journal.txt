@@ -525,4 +525,22 @@ that I don't need to make it a lot nicer, but I can do that as part
 of getting a "spike" of functionality done.
 
 
+==================================================================
+Wednesday, January 3, 2018
+==================================================================
+
+JSON that is formatted by the client to tell the server what to generate 
+should be extensible. Design it around GraphQL? Not yet. Let's start
+with the simplest thing that could possibly work.
+
+{
+  "command":"generate",
+  "type":"D3",
+  "parameters":{
+    ...
+  },
+  "location": {
+    ...stuff about directory / file names ...
+  }
+}
 
