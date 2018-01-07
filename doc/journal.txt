@@ -544,3 +544,30 @@ with the simplest thing that could possibly work.
   }
 }
 
+==================================================================
+Thursday, January 4, 2018
+==================================================================
+
+I'm feeling really crummy tonight, but I thought I'd try to at least
+think about this. Let's think about testing the format tonight.
+
+I think all I have to do is write a test that will fail because there
+is no JSON file.
+
+==================================================================
+Saturday, January 6, 2018
+==================================================================
+
+Later on, I'll want to have a lot of state (including history from 
+previous sessions) tucked away in mongodb (or something) on the server
+side, but for right now, I'll just try collecting all the state I
+need on the client side, and sending just what the server needs to 
+generate a D3 sample.
+
+Continuing on TDD of D3 sample generation...
+
+Converted the golang server to use Gorilla Mux. Got the first test
+working. Added a stubbed out handler for generating D3 sample code.
+
+
+
