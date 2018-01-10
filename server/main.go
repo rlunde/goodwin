@@ -4,8 +4,8 @@ package main
 import (
 	"net/http"
 
-	"./codegen"
 	"github.com/gorilla/mux"
+	"github.com/rlunde/goodwin/server/codegen"
 )
 
 /* using Gorilla: https://github.com/gorilla/mux */
