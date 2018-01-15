@@ -569,5 +569,23 @@ Continuing on TDD of D3 sample generation...
 Converted the golang server to use Gorilla Mux. Got the first test
 working. Added a stubbed out handler for generating D3 sample code.
 
+==================================================================
+Sunday, January 14, 2018
+==================================================================
 
+I want to break down MVP into:
+
+1) a definition - a short paragraph of why, who, what, when
+2) a list of stories - features expressed as user stories
+3) for each story, a list of tasks
+
+Once that's done, I want to move everything but what is on path 
+to that into a backlog folder.
+
+First, to get the updated client built:
+
+$ cd simpleclient
+$ yarn
+$ yarn start
+$ open http://localhost:3000
 

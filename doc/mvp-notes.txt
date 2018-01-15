@@ -1,0 +1,12 @@
+* generate the 5 most popular D3 charts as examples, with parameterized options
+* generate N (3?) other examples from different things based on stack overflow questions
+* generate tests from existing code
+* tell N jokes in chat interface
+* say M wisdom quotes in chat interface
+* launch browser to Q blogs or vlogs based on questions
+* rant about number of languages with no value added 
+* talk about idea to do kaizen / incremental improvement, with conversation
+* talk about multiple backends and answer voting in real time
+* liken it to quora or stack overflow with dynamic content in real time
+* combine chat interface and form interface
+* have a minimal game-like context to "remember" conversation
