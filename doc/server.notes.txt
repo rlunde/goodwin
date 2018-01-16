@@ -12,21 +12,13 @@ The problem with a client that can interact with local files but that gets its
 orders from a server is that security becomes a nightmare even more quickly.
 
 I've tried to think of a good way to provide the functionality without the risk,
-but it's really complicated. What I propose is that people set up
-a VM (e.g. with VirtualBox) for use with Goodwin, and let the server be as
-powerful as needed, then they can synchronize generated code (etc.) via git
-or something similar.
+but it's really complicated. 
 
-In a way, it's like making your own browser sandbox, only you can let Goodwin
-do whatever it wants. It's only when you move things from there out to the
-real world that you should make sure you know what you're doing, but if you're
-committing code to an actual project (of your own or some other project) you
-really ought to know what is in it.
-
-Of course, we're going to try our hardest to not let anything bad get into the
-code or in the rules, but if you decide to run it on your actual computer rather
-than inside a VM, it's definitely "Use At Your Own Risk". We'll have to make
-sure we come up with a suitable warning and disclaimer.
+I think the best thing to do at first (at least) is just put everthing in docker
+images, and run the client locally inside docker with a volume mounted for generated
+code or code you're working on. Even then, it's likely that we'll want to load
+stuff into files inside the docker container while working on it, and only write
+them out when ready to copy them elsewhere.
 
 How To Build The Server
 

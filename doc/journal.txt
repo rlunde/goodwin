@@ -589,3 +589,11 @@ $ yarn
 $ yarn start
 $ open http://localhost:3000
 
+
+==================================================================
+Monday, January 15, 2018
+==================================================================
+
+It's too late to do much of anything tonight already. I'll try to just 
+expand my definition of MVP a bit, and move something to a backlog folder.
+
