@@ -597,3 +597,47 @@ Monday, January 15, 2018
 It's too late to do much of anything tonight already. I'll try to just 
 expand my definition of MVP a bit, and move something to a backlog folder.
 
+==================================================================
+Sunday, January 21, 2018
+==================================================================
+
+I thought I'd try to get back to TDD today, so that means both
+the go/server side and the js/simpleclient side
+
+I started using jest for JS testing the last time I looked at this.
+
+https://facebook.github.io/jest/docs/en/getting-started.html
+To run the tests, do:
+
+$ npm test
+or
+$ yarn test
+
+I'd also like to try airbnb's enzyme. Does it work with jest?
+https://github.com/airbnb/enzyme
+
+Yes! https://github.com/airbnb/enzyme/blob/master/docs/guides/jest.md
+
+I installed enzyme with:
+$ npm i --save-dev enzyme enzyme-adapter-react-16
+
+They suggest using yarn for jest-enzyme. That starts with:
+
+$ yarn add jest-enzyme --dev
+
+Then I added this to package.json:
+
+"jest": {
+    "setupTestFrameworkScriptFile": "./node_modules/jest-enzyme/lib/index.js",
+      "unmockedModulePathPatterns": [
+      "react",
+      "enzyme",
+      "jest-enzyme"
+    ]
+  },
+
+That's all I have time for tonight. I should start off next time by seeing what this
+sample project does, and trying to get it going with that:
+
+https://github.com/vjwilson/enzyme-example-jest/blob/master/src/__tests__/Foo-test.js
+
