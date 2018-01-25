@@ -641,3 +641,17 @@ sample project does, and trying to get it going with that:
 
 https://github.com/vjwilson/enzyme-example-jest/blob/master/src/__tests__/Foo-test.js
 
+==================================================================
+Wednesday, January 24, 2018
+==================================================================
+
+Tonight's randomly selected task is to simplify goodwin, rather than test.
+
+I think the best way to do that is just to divide and conquer.
+
+Bar chart:
+  Collect input:
+    Collect data source type:
+    Make sample
+  Generate sample code
+Dockerize it
