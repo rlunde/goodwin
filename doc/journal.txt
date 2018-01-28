@@ -655,3 +655,39 @@ Bar chart:
     Make sample
   Generate sample code
 Dockerize it
+
+==================================================================
+Thursday, January 25, 2018
+==================================================================
+
+To start with a test, I would make a bar chart sample, then make the input
+to use with a code generator, then make a test that the sample is identical,
+then write the code to do it.
+
+I probably don't want to make a super-fragile test, which would happen if 
+I just checked for an exact string match. But if I don't do that, I'd need to 
+do some sort of parsing of the generated code, or at least have some regexes that
+match various parts.
+
+In the long run, I want to do code regeneration, so parsing code is going to 
+be required. 
+
+I guess a compromise is to start by just looking for significant bits.
+
+I'll make a sample under samples/barchart_sample1.
+
+==================================================================
+Saturday, January 27, 2018
+==================================================================
+
+I'm using VS Code with this project, and had just spent a few minutes
+working on this when it told me I had a corrupted VS Code. When I re-installed
+it and restarted it, the stuff I'd written was missing. This makes me nervous.
+
+Tonight: documentation
+Tasks:
+1) review what I have already, make a list/index
+2) make a list of the documentation I'd like to have
+3) make a plan (goals, stories, tasks) to get there, with a simple spreadsheet
+4) use storytelling and humor to make the docs interesting to read
+
