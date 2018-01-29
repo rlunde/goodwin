@@ -1,0 +1,51 @@
+Ever since the shiny first days of software development, we've had computer languages.
+At first they were just primitive assembly languages that were little more than syntactic 
+sugar around machine language. But thanks to Admiral Grace Brewster Murray Hopper (and many 
+others after her) we rapidly entered the age of computer programming via high level
+languages.
+
+Whether it was Cobol or Pascal or Fortran or Assember or Lisp or (later) Java or
+JavaScript or Ruby or Go or Python or (you get it)...they're almost all just as 
+capable of being used to make a program as any of the others. It's not the language 
+that's important (apologies to language developers)--it's the program that is developed.
+
+I feel that we are at a point in history where we can move on to the next phase of 
+programming, but it's going to take imagination and collaboration and frustration in order
+to cross the chasm. 
+
+The goal: a "programmers assistant" that starts off just barely better than nothing, but 
+that improves steadily (and hopefully improves more quickly as time goes on) so that before 
+long it's good enough that software developers are much more productive when using it than
+without it.
+
+1) This doesn't mean automatic programming.
+2) This doesn't mean computer aided engineering. Not in the usual sense, at least.
+3) This is going to be an organically growing mess, just like the Internet, if it works at all.
+
+So how do we get from nothing to a marginally useful programmers assistant?
+
+The name Goodwin, by the way, comes from Archie Goodwin, the loyal sidekick of the
+fictional detective Nero Wolfe written by Rex Stout. Archie Goodwin was a wiseass and
+a clever person himself, he just didn't run the show. 
+
+The Goodwin Manifesto
+---------------------------
+
+1) Fun comes first. If it's not fun, it will never cross the chasm into actual usefulness.
+2) We must have a culture of participation in improving it. That means rather than making it hard to 
+   contribute to, we should make it almost impossible to resist contributing to it.
+3) Anyone who uses it to help with programming should get the help they need, whether it's 
+   directly from Goodwin or from other developers.
+4) You get karma from either using it or helping people who try to use it or from improving it.
+5) The two tasks of Goodwin are:
+  a) help people develop software
+  b) help people improve Goodwin
+6) There's more than one way to do it. The architecture, components, and implementation of 
+   components may all be shifting, but various alternatives competing to produce better results.
+7) A chat interface (initially just text, but eventually speech) should be a central component,
+   but the goal is to have a conversation and to collaborate, not to direct some action.
+8) This manifesto will change over time. This is a *very* rough and poorly-thought-out first draft.
+9) The goal of Goodwin is to be fun and useful, and the goal of Goodwin development is to be
+   fun and useful. Developers who participate should make friends, learn new skills, and 
+   get a good feeling of helping to produce something useful.
+
