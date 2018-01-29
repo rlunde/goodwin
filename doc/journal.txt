@@ -691,3 +691,18 @@ Tasks:
 3) make a plan (goals, stories, tasks) to get there, with a simple spreadsheet
 4) use storytelling and humor to make the docs interesting to read
 
+==================================================================
+Sunday, January 28, 2018
+==================================================================
+
+Tonight: design 
+
+One of the things that Design First thinking is supposed to accomplish,
+it to address the real problems to be solved, rather than get all snarled
+up in features and functionality that at the end of the day has nothing
+to do with what the thing was ultimately about.
+
+I think what I need is a manifesto. I don't even really know what that
+means yet, but that's something I think might help me figure out how to 
+get this thing done.
+
