@@ -706,3 +706,30 @@ I think what I need is a manifesto. I don't even really know what that
 means yet, but that's something I think might help me figure out how to 
 get this thing done.
 
+==================================================================
+Wednesday, January 31, 2018
+==================================================================
+
+Tonight: simplify
+
+Let's get back to a single first feature:
+
+Bar chart:
+  Collect input:
+    Collect data source type:
+
+1) trigger bar chart form
+  a) collect input from the chat interface
+    i) look up react/redux input handler example
+      - I just added className "chat-input" to the input field
+    ii) watch Stephen Grider's tutorial again, take notes
+  b) display the form as a modal
+2) collect data source type (csv, tsv (tab separated), dsv (delimeter separated))
+3) collect data source file name (or let them choose an existing sample)
+
+This looks like an interesting tutorial:
+http://blog.isquaredsoftware.com/2016/10/practical-redux-part-0-introduction/
+
+For now though, I'm too tired to make progress on this (little sleep for more than 
+a week due to home damage / reconstruction), so I'll go look at SG's tutorial for 
+a few minutes and call it a day.
