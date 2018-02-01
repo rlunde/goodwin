@@ -37,7 +37,7 @@ const Home = () => (
         </div>
       </div>
       <form>
-        <input type="text" placeholder="Your message" />
+        <input className="chat-input" type="text" placeholder="Your message" />
         <div className="msg-send">put a send button here</div>
       </form>
     </section>
