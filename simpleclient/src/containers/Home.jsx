@@ -1,7 +1,7 @@
 import React from 'react';
 
 const Home = () => (
-  <div className="main-and-sidebar-wrapper">
+  <div className="main-wrapper">
 
     <section className="main">
       <div className="messages">
@@ -14,37 +14,14 @@ const Home = () => (
         </div>
       </div>
       <div className="messages">
-        <div>
-          <h3 className="msg--date">Today - 19:44</h3>
-          <div className="msg msg--me">
-            <blockquote>What do you know?</blockquote>
-          </div>
-          <div className="msg msg--them">
-            <blockquote>I told you once...</blockquote>
-          </div>
-          <div className="msg msg--me">
-            <blockquote>something else</blockquote>
-          </div>
-          <div className="msg msg--them">
-            <blockquote>another thing</blockquote>
-          </div>
-          <div className="msg msg--me">
-            <blockquote>something else</blockquote>
-          </div>
-          <div className="msg msg--them">
-            <blockquote>another thing</blockquote>
-          </div>
-        </div>
+        <h3 className="msg--date">Today - 19:44</h3>
+        {/* today's messages will go here */}
       </div>
       <form>
         <input className="chat-input" type="text" placeholder="Your message" />
         <div className="msg-send">put a send button here</div>
       </form>
     </section>
-
-    <aside className="sidebar">
-      <h3>Sidebar</h3>
-    </aside>
   </div>
 );
 
