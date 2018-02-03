@@ -743,3 +743,14 @@ I'm so tired tonight that I'm sitting here, stunned, like a carp.
 I've had around 4 hours of sleep a night for the past...forever.
 
 So just whining tonight is all I can muster.
+
+==================================================================
+Friday, February 2, 2018
+==================================================================
+
+Tonight: coding
+
+I think if I'm going to use a modal for the form, I'll just get rid of the sidebar.
+
+I did that, and got rid of a little bit of the stuff that was just there to see what formatting looked like.
+

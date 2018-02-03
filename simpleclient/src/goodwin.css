@@ -61,7 +61,7 @@ header button {
 
 /* Main Section */
 
-.main-and-sidebar-wrapper {
+.main-wrapper {
     display: flex;
 }
 
@@ -110,7 +110,7 @@ footer p {
 
 
 @media (max-width: 600px) {
-    .main-and-sidebar-wrapper {
+    .main-wrapper {
         flex-direction: column;
     }
 
