@@ -14,4 +14,8 @@ user interface to a programming environment.
    - don't assume greenfield (new) development - parse and discuss existing code
    - ask questions to determine requirements, and don't overcomplicate (e.g. don't use functional programming for hello world)
    - should be able to pass questions along to real senior developers if automation can't currently handle them
-
+ * there should be a good reason for people to use goodwin to make goodwin itself more useful
+   - explore ways to evolve it - e.g. different people can branch/improve alternative subsystems
+   - use ML and simulations to try to automatically learn coding by processing projects in github and asking questions
+   - try to keep track somehow of how helpful people have been, similar to karma points?
+   
