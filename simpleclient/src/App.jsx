@@ -24,7 +24,7 @@ class App extends Component {
     return (
       <HashRouter>
 
-        <div className="container">
+        <div className="goodwin-app container">
 
           <header>
             <nav>
