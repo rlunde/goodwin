@@ -762,3 +762,27 @@ Saturday, February 3, 2018
 Just working on long term vision and big picture stuff tonight. How do you make
 a super useful developer tool? Start with a (very) slightly less useful developer
 tool and use it to help you make an improved version.
+
+==================================================================
+Sunday, February 4, 2018
+==================================================================
+
+I'm going through Stephen Grider's Advanced React and Redux on Udemy
+again, and taking notes. I need to translate the testing he's doing
+to use Jest with Enzyme.
+
+https://github.com/vjwilson/enzyme-example-jest/
+
+I ended up having to install more things and fix a bunch of issues
+from the sample test I copied:
+
+npm i --save-dev enzyme enzyme-adapter-react-16
+npm i --save-dev jest-cli
+npm i --save-dev jest-enzyme
+
+I added a file named "assetTransformer.js" and configured jest in package.json as in:
+https://facebook.github.io/jest/docs/en/webpack.html
+Then fixed a problem by using a solution similar to:
+https://stackoverflow.com/questions/46435558/could-not-find-declaration-file-for-enzyme-adapter-react-16
+
+That got me (finally) to a point where I got an actual test failure! Yay!
