@@ -786,3 +786,7 @@ Then fixed a problem by using a solution similar to:
 https://stackoverflow.com/questions/46435558/could-not-find-declaration-file-for-enzyme-adapter-react-16
 
 That got me (finally) to a point where I got an actual test failure! Yay!
+
+==================================================================
+Tuesday, February 6, 2018
+==================================================================
