@@ -788,5 +788,15 @@ https://stackoverflow.com/questions/46435558/could-not-find-declaration-file-for
 That got me (finally) to a point where I got an actual test failure! Yay!
 
 ==================================================================
-Tuesday, February 6, 2018
+Wednesday, February 7, 2018
 ==================================================================
+
+I had a minor epiphany just now, which is all I have time for tonight:
+
+If my main goal for goodwin is that it is "an evolutionary developer's 
+assistant that also helps to make itself better", the first thing I should
+work on is not D3 code generation, but something that could actually 
+be of use in making goodwin better. (Maybe that's a "duh!" but it just
+hit me.)
+
+So I'm going to go off and think of baby steps that might align with that.
