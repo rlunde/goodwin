@@ -800,3 +800,43 @@ be of use in making goodwin better. (Maybe that's a "duh!" but it just
 hit me.)
 
 So I'm going to go off and think of baby steps that might align with that.
+
+==================================================================
+Thursday, February 8, 2018
+==================================================================
+
+Ideas for things that would help users of goodwin extend goodwin:
+
+1) chatbot development
+2) code re-organization
+3) keep track of coding todos
+4) use search algorithms to guide development
+5) divide and conquer support: ask questions, save answers, clarify, record alternatives,
+   keep track of things to figure out, focus on a feature at a time, combine strategies 
+   with loose coupling
+6) motivational help 
+7) extract / separate framework from code 
+
+==================================================================
+Friday, February 9, 2018
+==================================================================
+
+Of those, several are related:
+
+3) keep track of coding todos
+4) use search algorithms (e.g. depth first development of a feature)
+5) divide and conquer support
+
+Right now, most people use a bug tracking system like Jira, and/or a planning
+tool like Trello. An interesting / problematic part of that is that it takes time
+and energy to connect a bug/feature with a part of the code. Sometimes that's just
+how it works, since you find out about the bug by running the software and noticiing
+that something isn't working the way you want. Many other times, though, you notice
+something while you're working on the code, but you don't have time to follow up
+right then. 
+
+Let's say you notice something is confusing or complicated: it could take a long
+time to figure out how to make it better, and sometimes there is essential complexity
+that will prevent much of a solution. Still, there's usually something you could do,
+even if it's only coming up with better names or documenting things.
+
