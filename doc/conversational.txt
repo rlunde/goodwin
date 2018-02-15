@@ -9,4 +9,3 @@ Imagine instead a dialog back and forth, where the "bot" could ask for
 clarification, or give a set of choices, and where the user could back
 up to previous questions
 
-More coming soon...

@@ -1,0 +1,7 @@
+
+technologies to learn and use:
+
+app server: go
+web server: go
+client: ES6 / react / redux
+deployment: docker

@@ -1,11 +1,3 @@
-* generate the 5 most popular D3 charts as examples, with parameterized options
-* generate N (3?) other examples from different things based on stack overflow questions
-  - 3 of top 5 questions are about git -- convert questions to git commands, by asking clarifying questions
-  - example of using yield in python, javascript, etc.
-  - interactive chat-based regex builder
-* generate tests from existing code
-  - start by looking for reasonable parsers?
-  - start by language popularity, especially if IDEs lack such things
 * tell N jokes in chat interface
   - look for clean-ish programming jokes
 * say M wisdom quotes in chat interface
