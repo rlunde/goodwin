@@ -1,0 +1,57 @@
+{
+  "name": "goodwin",
+  "version": "0.1.0",
+  "description": "A minimal goodwin client based on electron",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron main.js",
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rlunde/goodwin.git"
+  },
+  "keywords": [
+    "Electron",
+    "goodwin",
+    "code",
+    "assistant"
+  ],
+  "author": "Ron Lunde",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/rlunde/goodwin/issues"
+  },
+  "homepage": "https://github.com/rlunde/goodwin#readme",
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.2",
+    "css-loader": "^0.28.9",
+    "electron-packager": "^10.1.1",
+    "electron-rebuild": "^1.7.3",
+    "enzyme": "^3.3.0",
+    "expect": "^21.2.1",
+    "jsdom": "^11.6.0",
+    "less": "^2.7.3",
+    "less-loader": "^4.0.5",
+    "mocha": "^4.1.0",
+    "node-libs-browser": "^2.1.0",
+    "spectron": "^3.7.2",
+    "style-loader": "^0.19.1",
+    "tether": "^1.4.3",
+    "webpack": "^3.10.0",
+    "webpack-dev-server": "^2.11.1"
+  },
+  "dependencies": {
+    "bootstrap": "^4.0.0",
+    "jquery": "^3.3.1",
+    "popper.js": "^1.12.9",
+    "react": "^16.2.0",
+    "react-bootstrap": "^0.31.5",
+    "react-dom": "^16.2.0",
+    "react-redux": "^5.0.6",
+    "redux": "^3.7.2",
+    "request": "^2.83.0"
+  }
+}

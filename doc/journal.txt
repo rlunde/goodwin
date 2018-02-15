@@ -840,3 +840,39 @@ time to figure out how to make it better, and sometimes there is essential compl
 that will prevent much of a solution. Still, there's usually something you could do,
 even if it's only coming up with better names or documenting things.
 
+==================================================================
+Wednesday, February 14, 2018
+==================================================================
+
+Tonight's task: simplify
+
+Let's start by trying to simplify the ideas for things to do.
+
+By "using search algorithms" what I mean is that when you're writing a program, you're 
+considering a whole lot of things at the same time. There's the list of things you want it 
+to do, finding a design that does those but makes the things that are most likely to change
+the easiest to change, figuring out a UI/UX that is tolerable, writing tests, keeping track of
+how the current piece fits into the larger whole, etc. It doesn't make much sense to do it
+as an entirely depth-first search or breadth-first search, since you don't want to have 
+something that's nearly useless until it's almost complete, and both of those approaches 
+are likely to result in that.
+
+I'm not even really sure how to describe what I'm thinking, so obviously it's very fuzzy.
+Imagine a kind of a "least cost" search, where each feature is ranked based on how much closer
+it gets to an acceptable MVP release, or (after that) to a feature release that makes the
+product incrementally better for many people at a small cost, or that makes it easier to do
+that in the future (but not the distant future). Preferably, this factors in some kind of ROI,
+so something that's hard but results in a big return will "cost" less than something that's 
+easy but doesn't do much good for many people.
+
+As a wild idea, let's start with the idea of using goodwin to help develop itself right 
+from the start. Obviously it doesn't exist yet, so we'll need to produce a log of "conversations"
+that you could imagine it having with developers, and artifacts it might produce, but all
+of the dialog and artifacts will be hand-made until we reach an MVP release (and presumably,
+even after that).
+
+First, I'm going to clean this directory structure up a bit. I'm moving simpleclient to client,
+making a webserver and an appserver, and moving dead-ends out of the way.
+
+
+
