@@ -5,7 +5,7 @@ import Adapter from 'enzyme-adapter-react-16';
 enzyme.configure({ adapter: new Adapter() });
 import App from '../App';
 
-describe('A suite', function() {
+describe('A suite', () => {
   const wrapper = shallow(<App />).find('.goodwin-app');
   //console.log(wrapper.debug());
   it('should contain a footer element', function() {
@@ -14,11 +14,11 @@ describe('A suite', function() {
       </footer>)).toBe(true);
   });
 
-  it('should be selectable by class "goodwin-app"', function() {
+  it('should be selectable by class "goodwin-app"', () => {
     expect(wrapper.hasClass('goodwin-app')).toBe(true);
   });
 
-  it('should mount in a full DOM', function() {
+  it('should mount in a full DOM', () => {
     expect(mount(<App />).find('.goodwin-app').length).toBe(1);
   });
 
