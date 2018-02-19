@@ -874,5 +874,36 @@ even after that).
 First, I'm going to clean this directory structure up a bit. I'm moving simpleclient to client,
 making a webserver and an appserver, and moving dead-ends out of the way.
 
+==================================================================
+Sunday, February 18, 2018
+==================================================================
+
+Today's task is goodwin/test
+
+That fits right in with the "advanced react and redux" course I'm taking on udemy from
+Stephen Grider. It's all TDD all the way, with him.
+
+Which is actually what all sorts of very wise people say to do. Stephen Covey says to
+Begin with the End in Mind. 
+
+Hmm. Maybe this is just something people named Stephen do?
+
+Anyway.
+
+I have a horrendous headache tonight, so I just want to do anything at all and go to bed.
+
+Holy mackerel! I just ran the current tests, after turning them into ES6, and they took 13 seconds
+to run! What in the world!
+
+Test Suites: 3 passed, 3 total
+Tests:       5 passed, 5 total
+Snapshots:   3 passed, 3 total
+Time:        13.261s
+
+I ran them a couple more times, and it went down to about 2.35 seconds to run them, but that's 
+still an eternity.
+
+I think my time is better spent tonight by learning more about TDD with react/redux, so I'll 
+stop here and go do that.
 
 
