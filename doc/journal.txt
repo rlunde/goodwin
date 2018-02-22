@@ -906,4 +906,22 @@ still an eternity.
 I think my time is better spent tonight by learning more about TDD with react/redux, so I'll 
 stop here and go do that.
 
+==================================================================
+Wednesday, February 21, 2018
+==================================================================
 
+Today is awful, too. 
+
+I know on social media, and especially on places like github, you're supposed to pretend
+that you're always doing great, and you never have any problems.
+
+Oh well.
+
+Today I spent WAY more time than I should have, trying to get Twitter typeahead (autocomplete) working with 
+Twitter Bootstrap, and I totally failed. Or rather, I got it working pretty quickly, but it just
+looked amateurish, and I thought "Oh, c'mon, it can't be that hard". Oh boy. It was so hard, I just 
+failed entirely. 
+
+I think that's the main thing about software development these days -- you see things that say it should 
+be easy peasy, and it turns out to be rocket surgery. Not because it's intrinsically hard, but because of 
+stupid shit, that you just don't know about until you're down in the weeds.
