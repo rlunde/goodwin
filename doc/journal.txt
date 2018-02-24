@@ -925,3 +925,31 @@ failed entirely.
 I think that's the main thing about software development these days -- you see things that say it should 
 be easy peasy, and it turns out to be rocket surgery. Not because it's intrinsically hard, but because of 
 stupid shit, that you just don't know about until you're down in the weeds.
+
+==================================================================
+Friday, February 23, 2018
+==================================================================
+
+Today's project is goodwin/design.
+
+Update on my typeahead+bootstrap problem. It turned out to be very easy to use jqueryui's autocomplete 
+with bootstrap 3 (which is what I have for that project), and it looked great, so I gave up trying to
+use typeahead.
+
+I don't remember if I wrote this idea before, but it's been kicking around 
+in the back of my mind for years: suppose I start by pretending that goodwin
+already works? Sort of a story-telling approach / mechanical turk-ish thing 
+I suppose.
+
+The basic elements to start with are:
+
+1) search algorithm / divide-and-conquer assistant for development
+2) manage TODO items that are sprinkled around in the code / doc for a project
+
+> OK, Goodwin. I want you to help me make a partially-automated developer's assistant
+< OK. Let's start by defining what that means? Do you have an idea for what a Minimum Viable Product (MVP) would be?
+> Not really. Some sort of chat interface, minimal understanding of code, and management of tasks towards an end.
+< Are those separate things? Let's figure out what each of those is, and how they interact.
+> They're mostly separate. I don't know yet how they interact.
+< Not a problem. We'll figure it out as we go.
+...
