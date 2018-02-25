@@ -4,6 +4,7 @@ import * as enzyme from 'enzyme';
 import Adapter from 'enzyme-adapter-react-16';
 enzyme.configure({ adapter: new Adapter() });
 import ChatInput from '../components/chat_input';
+import { Button } from 'react-bootstrap';
 
 describe('test ChatInput', () => {
   const wrapper = shallow(<ChatInput />);
@@ -22,9 +23,8 @@ describe('test ChatInput', () => {
     */
     expect(wrapper.find('.chat-input')).toHaveLength(1);
   });
-  if('has a button', () => {
-    //weird that this works fine, but the test above fails. Something funny
-    //about find of a component by name, versus find of a class, when using jest?
-    expect(wrapper.find(Button)).to.have.length(1);
+  it('has a button', () => {
+    expect(wrapper.find(Button)).toHaveLength(1);
   });
+  
 });

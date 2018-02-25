@@ -1,4 +1,5 @@
 import React from 'react';
+import ChatInput from '../components/chat_input';
 
 const Home = () => (
   <div className="main-wrapper">
@@ -18,8 +19,9 @@ const Home = () => (
         {/* today's messages will go here */}
       </div>
       <form>
-        <input className="chat-input" type="text" placeholder="Your message" />
-        <div className="msg-send">put a send button here</div>
+        {/* <input className="chat-input" type="text" placeholder="Your message" />
+        <div className="msg-send">put a send button here</div> */}
+        <ChatInput/>
       </form>
     </section>
   </div>

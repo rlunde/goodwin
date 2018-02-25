@@ -953,3 +953,21 @@ The basic elements to start with are:
 > They're mostly separate. I don't know yet how they interact.
 < Not a problem. We'll figure it out as we go.
 ...
+
+==================================================================
+Saturday, February 24, 2018
+==================================================================
+
+Today: goodwin/code
+
+Next steps:
+1) chat interface
+2) minimal understanding of code
+3) management of tasks towards a goal
+
+Starting with chat interface:
+1) write basic tests for input form, button, text box, text entry 
+  a) I installed jest cli globally so I could "jest --watch" (which didn't work with yarn or npm)
+  b) it turns out that if you type "if" rather than "it" when making a test, it's hard to see...
+  c) I got the component <ChatInterface/> working in the Home component (I can tell since its css is broken)
+  
