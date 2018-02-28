@@ -971,3 +971,9 @@ Starting with chat interface:
   b) it turns out that if you type "if" rather than "it" when making a test, it's hard to see...
   c) I got the component <ChatInterface/> working in the Home component (I can tell since its css is broken)
   
+==================================================================
+Tuesday, February 27, 2018
+==================================================================
+
+Nothing to check in tonight, dang it! Watching some cool Udemy videos 
+on react and redux that will help with this, I think. 
