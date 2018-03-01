@@ -977,3 +977,13 @@ Tuesday, February 27, 2018
 
 Nothing to check in tonight, dang it! Watching some cool Udemy videos 
 on react and redux that will help with this, I think. 
+
+==================================================================
+Wednesday, February 28, 2018
+==================================================================
+
+Tonight, first let's see if I can improve the CSS I broke last Saturday...
+
+Good grief. I can't figure out what the hell is going on, even in chrome devtools.
+
+I wonder if the react-bootstrap stuff is messing things up?

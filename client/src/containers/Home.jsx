@@ -18,7 +18,7 @@ const Home = () => (
         <h3 className="msg--date">Today - 19:44</h3>
         {/* today's messages will go here */}
       </div>
-      <form>
+      <form className="chat-input">
         {/* <input className="chat-input" type="text" placeholder="Your message" />
         <div className="msg-send">put a send button here</div> */}
         <ChatInput/>
