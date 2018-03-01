@@ -10,7 +10,7 @@ export default class ChatInput extends React.Component {
         return (
             <div>
                 <input className="chat-input" type="text" placeholder="Your message" />
-                <Button className="msg-send">send</Button>
+                <Button bsSize="large" className="msg-send" >send</Button>
             </div>
         );
     }

@@ -32,7 +32,7 @@ class App extends Component {
               <li><Link to="/">Home</Link></li>
               <li><Link to="/about">About</Link></li>
             </nav>
-            <button>Button</button>
+            {/* <button>Button</button> */}
           </header>
 
           <Switch>
