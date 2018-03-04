@@ -987,3 +987,34 @@ Tonight, first let's see if I can improve the CSS I broke last Saturday...
 Good grief. I can't figure out what the hell is going on, even in chrome devtools.
 
 I wonder if the react-bootstrap stuff is messing things up?
+
+==================================================================
+Saturday, March 3, 2018
+==================================================================
+
+I started trying to convert a project from Backbone to React yesterday,
+and quickly realized that what might be a fairly simple and incremental
+project quickly becomes a challenge, just because of all the build/test 
+infrastructure -- webpack, jest, react, redux, react-router, etc. 
+
+One of the weird things about software development is that everyone 
+teaches how to do "green field" development, while almost everyone
+spends almost all their time working with existing projects using what
+is often called "legacy" libraries and tools.
+
+There's always going to be a newer/shinier framework or library or
+version, and there's always going to be a dilemma of "do we keep
+going with what we have that works" or "do we invest a lot of time and
+money doing a conversion".
+
+You see a lot of blogs about "here's how we converted all our old stuff
+from <<some formerly popular language/framework/design>> to <<some newly
+popular system>>. The trouble with that is survivorship bias. Fewer 
+people are going to write "we tried to do this, and totally failed" 
+articles than "we tried to do this, and it was really hard but we are 
+freaking rock stars so we got it done".
+
+Goodwin should be able to help with code maintenance. If we have to 
+choose between code generation that is really cool, and code "regeneration"
+that is very useful, the latter should be what we focus on.
+
