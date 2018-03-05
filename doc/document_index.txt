@@ -1,9 +1,0 @@
-doc/api-notes.txt:
-
-  talk about client/server interaction
-    1) revise to reflect current thinking of server (and client) as downloaded docker image
-    2) think about chat interface in particular, and how to combine goodwin and real-time human help
-    3) think about graphql
-    4) think about server-to-server as well as client-to-server
-
-doc/chat-notes.txt

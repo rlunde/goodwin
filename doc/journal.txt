@@ -1018,3 +1018,55 @@ Goodwin should be able to help with code maintenance. If we have to
 choose between code generation that is really cool, and code "regeneration"
 that is very useful, the latter should be what we focus on.
 
+==================================================================
+Sunday, March 4, 2018
+==================================================================
+
+Yesterday I tried simply upgrading goodwin client to the latest versions
+of what it uses, and it broke horribly. 
+
+I used https://github.com/tjunnone/npm-check-updates (ncu) which did a great
+job of telling me what I could upgrade, and doing the upgrade, but it turned
+out that the resulting error messages led me down one rabbit hole after
+another. I think most of them were due to webpack4, which sure appears to
+me to be NOT ready for prime time.
+
+I finally got things back to where they had been, using git (although even so 
+I'd mistakenly checked in a partial upgrade that I thought was working).
+
+The lesson learned: try to upgrade the least risky thing first, and only
+when necessary.
+
+Here's what ncu tells me when I tell it to avoid anything with the string webpack in 
+it:
+
+$ $ ncu -x /webpack/
+Using /Users/ron/Projects/src/github.com/rlunde/goodwin/client/package.json
+⸨░░░░░░░░░░░░░░░░░░⸩ ⠴ :
+ babel-eslint             ^7.2.3  →   ^8.2.2
+ babel-jest              ^21.2.0  →  ^22.4.1
+ eslint                  ^3.19.0  →  ^4.18.2
+ eslint-config-airbnb    ^15.1.0  →  ^16.1.0
+ eslint-plugin-jsx-a11y   ^5.1.1  →   ^6.0.3
+ file-loader             ^0.11.2  →  ^1.1.11
+ jest                    ^21.2.1  →  ^22.4.2
+ react-hot-loader         ^3.1.3  →   ^4.0.0
+ style-loader            ^0.18.2  →  ^0.20.2
+ url-loader               ^0.5.9  →   ^1.0.1
+
+The following dependencies are satisfied by their declared version range, but the installed versions are behind. You can install the latest versions without modifying your package file by using npm update. If you want to update the dependencies in your package file anyway, run ncu -a.
+
+ prop-types            ^15.6.0  →   ^15.6.1
+ babel-loader           ^7.1.2  →    ^7.1.3
+ cross-env              ^5.1.1  →    ^5.1.3
+ css-loader            ^0.28.7  →  ^0.28.10
+ eslint-plugin-import   ^2.8.0  →    ^2.9.0
+ eslint-plugin-react    ^7.5.1  →    ^7.7.0
+ jest-cli              ^22.1.4  →   ^22.4.2
+ jest-enzyme            ^4.1.1  →    ^4.2.0
+ sass-loader            ^6.0.6  →    ^6.0.7
+
+Run ncu with -u to upgrade package.json
+
+I'm not upgrading anything tonight, though.
+
