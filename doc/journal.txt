@@ -1070,3 +1070,34 @@ Run ncu with -u to upgrade package.json
 
 I'm not upgrading anything tonight, though.
 
+==================================================================
+Sunday, April 1, 2018
+==================================================================
+
+I've been working on humorscope, thing-a-day, and sideauth over the
+past few weeks. 
+
+The trouble with goodwin is a chicken-and-egg thing, I think. It's not
+going to get to any MVP state without an enormous amount of work by
+a fair number of people, and until it's there it's unlikely to attract
+much of any work by almost anyone.
+
+So I think I can't start out trying to make something that's super
+helpful in a general way. I need to figure out how to make something
+that's useful to the right people to get to the next step, which attracts
+another set of people, and so on.
+
+How does the Borg begin? Not that I want this to become the Borg, but
+I do want it to get to the point where it's good enough and easy enough
+to work on that people want to help improve it and can realistically
+get involved.
+
+Maybe what I need to do is write it as a story, to begin with, where
+it's years in the future and the only thing standing in the way of
+a complete breakdown of society is Goodwin -- and someone is holed
+up in a secret hideout, using it to fight for freedom from a neonazi
+empire. Or something.
+
+It should be a story and a game, build around github.
+
+I need to think about this.
