@@ -1101,3 +1101,17 @@ empire. Or something.
 It should be a story and a game, build around github.
 
 I need to think about this.
+
+==================================================================
+Friday, April 6, 2018
+==================================================================
+
+I've been thinking a bit more about it, and have a silly idea 
+that I'm exploring.
+
+Suppose it starts off as a story, but also something like a text 
+adventure game. It could involve time travel (Goodwin goes back in 
+time to help create itself, kind of like the Director AI in the Travelers
+TV show, but not trying to save the world--just trying to help people 
+be more productive).
+
