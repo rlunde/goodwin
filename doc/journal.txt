@@ -1115,3 +1115,17 @@ time to help create itself, kind of like the Director AI in the Travelers
 TV show, but not trying to save the world--just trying to help people 
 be more productive).
 
+==================================================================
+Sunday, April 29, 2018
+==================================================================
+
+I'm finally back from a 10 day trip, but it's already after 11pm,
+so I'm not going to get anything done tonight.
+
+Imagine a combination of:
+  a) Travelers
+  b) Hitchhiker's Guide to the Galaxy
+  c) something else?
+
+I think it would start off by cleaning up this project, to simplify
+everything, and make a rudimentary text adventure developer's game.
