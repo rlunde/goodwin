@@ -56,6 +56,7 @@
     "webpack-dev-server": "^2.11.1"
   },
   "dependencies": {
+    "hoek": "^5.0.3",
     "prop-types": "^15.6.0",
     "react": "^16.2.0",
     "react-bootstrap": "^0.32.1",
