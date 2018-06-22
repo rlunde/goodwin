@@ -1,7 +1,4 @@
-* tell N jokes in chat interface
-  - look for clean-ish programming jokes
-* say M wisdom quotes in chat interface
-* launch browser to Q blogs or vlogs based on questions
+
 * explain rationale behind goodwin
   - talk about how we continue to create a great number of new programming languages with no value added 
   - talk about idea to do kaizen / incremental improvement, with conversation
@@ -10,8 +7,6 @@
 * combine chat interface and form interface (eventually)
 * have a minimal game-like context to "remember" conversation
 * choose a few common things to answer questions about via chat
-  - git questions
-  - common language questions ("how do I iterate over a map")
-  - small examples modified to use specific types/names/etc.
+
 
 
