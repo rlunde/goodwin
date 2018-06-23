@@ -1,21 +1,6 @@
 
 I think the client will build stuff locally, edit code (itself -- it's not 
-going to be an editor), and that kind of thing. Plus, it will send conversation
-and files to the server.
-
-The server will keep only as much of a copy of what's on the client as you want,
-and will archive, compress, and encrypt the files when you log out -- that will
-prevent having to upload the whole thing every times you log in, but will
-be a little safer than leaving things laying around in the clear.
-
-TODO: Find out what Box, DropBox, OneDrive, Drive, etc. do about server-side
-file security. At least initially, maybe the thing to do is say "don't use it
-on sensitive things?"
-
-The server should keep a record of all the interactions you've had with Goodwin,
-and should let you search for spots in the conversation and restore the context
-of any point in the conversation.
-
+going to be an editor), and that kind of thing. 
 Context:
 
 1) what are you doing? (Developing, designing, planning a party, ...)
@@ -29,9 +14,8 @@ Context:
 7) is there are rough schedule?
 8) what is the success criteria?
 
-One possibility for the client is just docker, which means that everything
-outside of generated files would be static (so any session data would be on
-the server), and there would be a volume for generated stuff.
+I think the whole thing should be in one or more (docker?) containers. Anything 
+that touches a local file should be through a volume, with no access otherwise 
+to the users file system.
 
-Another possibility is vagrant.
 
