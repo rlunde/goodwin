@@ -81,3 +81,13 @@ etc.
 Part of that will just be deleting all this crap for now, so that
 it's not going to confuse people into thinking that there's more
 to this than there is.
+
+==================================================================
+Saturday, June 23, 2018
+==================================================================
+
+I tidied up some docs on this today, which is my main goal for 
+the next little bit. I want to:
+  a) define the simplest thing that could possibly be fun / interesting
+  b) write a story that explains the origin and destination
+  

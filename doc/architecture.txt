@@ -1,12 +1,14 @@
 client: web (html, css, js)
 web server: 
-  1) serve the client files,
-  2) provide all APIs used by client
-  3) read/write from mounted volume, and communicate with app server
+  1) runs in a docker container
+  2) serve the client files
+  3) provide all APIs used by client
+  4) read/write from mounted volume, and communicate with app server
+
 app server:
   1) all business logic
-  2) eventually updated often, and run remotely
-  3) initially just another local docker image
+  2) frequently updated from web image
+  3) just another local docker image
 
 My idea is to let the client have full filesystem access, and be
 more or less controlled from the server which may be constantly
@@ -16,6 +18,6 @@ Because of the serious security problems with that, I plan to run
 both the servers in docker containers, with volumes mounted that
 will isolate whatever goodwin does/generates from the host.
 
-People will have to copy generated code (etc.) from the volume
+People will have to copy generated code (etc.) to or from the volume
 themselves to use it.
 
