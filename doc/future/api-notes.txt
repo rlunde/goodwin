@@ -1,5 +1,5 @@
 
-I think the client will build stuff locally, edit code (itself -- it's not 
+I think the client will build stuff locally, edit code (all by itself -- it's not 
 going to be an editor), and that kind of thing. 
 Context:
 

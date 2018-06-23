@@ -18,4 +18,16 @@ user interface to a programming environment.
    - explore ways to evolve it - e.g. different people can branch/improve alternative subsystems
    - use ML and simulations to try to automatically learn coding by processing projects in github and asking questions
    - try to keep track somehow of how helpful people have been, similar to karma points?
+
+Things to avoid:
+ * don't try to support many languages (at least initially)
+ * don't try to support many frameworks -- should just be basic programming
+ * don't try to be perfect or complete
+
+Start with a story
+ * conversation between programmers about how one of them is so productive
+ * explains that goodwin used to be super primitive but thousands of programmers helped make him more useful
+ * initially just a chatbox that could pass on a question to a live developer for help when it gets stuck
+ * gradually able to answer more and more things itself
+ * people give back to community by helping to improve Goodwin
    
